@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>title</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=400, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/daterangepicker.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="wrapper-content">
+			<div class="reservation">
+				<!-- header.html -->
+<header class="header">
+	<div class="container">
+		<div class="header__between">
+			<a href="#" class="logo">Xx
+				<span class="logo-span">.</span>
+			</a>
+			<nav class="header-nav">
+				<ul class="header__selects">
+					<li class="header__selects-item d-md-block">
+						<a href="#" class="link">$ USD
+							<svg class="header__selects-arrow">
+								<use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="header__selects-item">
+						<a href="#" class="link">RU
+							<svg class="header__selects-arrow">
+								<use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<ul class="menu">
+					<li class="menu-item d-md-block">
+						<a href="#" class="link">
+							<span class="add"></span>
+							добавить квартиру
+						</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="link link-sign-in">
+							ВХОД
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<button type="button" class="burger">
+				<span class="burger-line burger-top"></span>
+				<span class="burger-line burger-bottom"></span>
+			</button>
+		</div>
+	</div>
+</header>
+
+
+
+				<div class="container">
+					<div class="reservation-img"></div>
+					<div class="reservation__content">
+						<p class="text-15">
+							<img src="img/pay.svg" alt="pay" class="img-card">
+
+							Онлайн оплата
+						</p>
+						<h1 class="title-main">
+							Мгновенное <br> бронирование <br> квартир
+						</h1>
+						<form class="form-search">
+							<div class="in-catalog"><p class="text-15">В каталоге 3842 квартиры</p></div>
+							<div class="search">
+								<div class="field">
+									<p class="name">Город</p>
+									<input type="text" class="input-city" id="js-easyAutocomplete" required>
+								</div>
+								<div class="field">
+									<p class="name">Прибытие и выезд</p>
+									<input type="text" class="input-date" name="daterange" required>
+									<div class="icon"><img src="img/calendar.svg" alt="calendar" class="img-calendar"></div>
+								</div>
+								<div class="field">
+									<p class="name">Гостей</p>
+									<input type="text" value="1 человек" class="input-visitor" readonly required>
+									<div class="icon"><img src="img/person.svg" alt="person" class="img-person"></div>
+									<ul class="dropdown">
+										<li class="dropdown-item">
+											<p class="c-gray">Взрослые
+												<span class="text-12">от 13 лет</span>
+											</p>
+											<div class="count ">
+												<button type="button" class="count-btn count-minus "></button>
+												<input type="text" class="input-count count__adults" value="1" readonly>
+												<button type="button" class="count-btn count-plus"></button>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<p class="c-gray">Дети
+												<span class="text-12">до 12 лет</span>
+											</p>
+											<div class="count">
+												<button type="button" class="count-btn count-minus "></button>
+												<input type="text" class="input-count count__children" value="0" readonly>
+												<button type="button" class="count-btn count-plus"></button>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<button type="submit" class="btn">
+									<svg class="img-search">
+										<use xlink:href="img/sprite/sprite.svg#search"></use>
+									</svg>
+									ПОИСК</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+			<div class="container">
+				<section class="watched">
+					<h2 class="title">Недавно просмотренные</h2>
+					<div class="row-slider">
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span class="price-crossed">$50</span>
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span class="price-crossed">$50</span>
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span class="price-crossed">$50</span>
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="discount">-10%</div>
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+
+										<div class="price">
+											<div class="price-row">
+												<span class="price-crossed">$50</span>
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="offers">
+					<div class="offers-row">
+						<h2 class="title">Лучшие предложения в Баку</h2>
+						<a href="#" class="btn btn-small" id="more-apartaments"><span>ВСЕ КВАРТИРЫ</span>
+							<svg class="arrow">
+								<use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="offers-cards">
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="discount">-10%</div>
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="discount">-10%</div>
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="discount">-10%</div>
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+					</div>
+				</section>
+			</div>
+			<section class="popular">
+				<div class="container">
+					<h2 class="title">Популярные направления</h2>
+					<ul class="popular-row">
+
+						<li class="popular-item">
+							<a href="#" class="text-17">баку</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">тбилиси</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">минск</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">баку</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">тбилиси</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">минск</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">баку</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">тбилиси</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">минск</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">баку</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">тбилиси</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">минск</a>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+			<section class="connect">
+				<div class="container">
+					<div class="connect__head">
+						<h2 class="title">Как подключиться к сервису</h2>
+						<a href="#" class="btn-light"><span>регистрация</span>
+							<svg class="arrow">
+								<use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+							</svg>
+						</a>
+					</div>
+
+					<div class="connect-row">
+						<div class="connect-item">
+							<div class="connect-item__head">
+								<p class="connect-item__number">1</p>
+								<p> регистрация  <span> (2 мин) </span></p>
+							</div>
+							<div class="connect-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore.  Ut enim ad minim veniam, quis nostrud.
+								</p>
+							</div>
+
+						</div>
+						<div class="connect-item">
+							<div class="connect-item__head">
+								<p class="connect-item__number">2</p>
+								<p> добавление квартиры  <span>  (6 мин) </span></p>
+							</div>
+							<div class="connect-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore.  Ut enim ad minim veniam, quis nostrud.
+								</p>
+							</div>
+						</div>
+						<div class="connect-item">
+							<div class="connect-item__head">
+								<p class="connect-item__number">3</p>
+								<p> получение денег    <span> (мгновенно) </span></p>
+							</div>
+							<div class="connect-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore.  Ut enim ad minim veniam, quis nostrud.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+				
+		</div>
+		<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="col">
+                <div class="footer-top__row">
+                    <a href="#" class="logo">Xx
+                        <span class="logo-span">.</span>
+                    </a>
+                    <p class="footer-text">
+                        Lorem ipsum dolor sit amet, <br> consectetur adipiscing
+                    </p>
+                </div>
+
+                <div class="markets">
+                    <a href="#">
+                        <img src="img/app-store.png" alt="app store" class="markets-img">
+                    </a>
+                    <a href="#">
+                        <img src="img/google-play.png" alt="google play" class="markets-img">
+                    </a>
+                </div>
+            </div>
+            <ul class="col">
+                <li class="footer-main">COMPANY</li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">About</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Partnership</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Careers</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Contacts</a>
+                </li>
+            </ul>
+            <ul class="col">
+                <li class="footer-main">host</li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Host your home</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Hosting rules</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Payment methods</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Hosting is safe</a>
+                </li>
+            </ul>
+            <ul class="col">
+                <li class="footer-main">SUPPORT</li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Knowledge base</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Report abuse</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-review">Trustpilot review score</a>
+                </li>
+            </ul>
+            <div class="markets-mob">
+                <a href="#">
+                    <img src="img/app-store.png" alt="app store" class="markets-img">
+                </a>
+                <a href="#">
+                    <img src="img/google-play.png" alt="google play" class="markets-img">
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__row">
+                <div class="footer-bottom__first">
+                    <p class="footer-text">
+                        © 2020 Rentxx, Inc. All rights reserved
+                    </p>
+                    <ul class="footer-bottom__ul">
+                        <li class="footer-bottom__li">
+                            <a href="#" class="footer-link">Privacy</a>
+                        </li>
+                        <li class="footer-bottom__li">
+                            <a href="#" class="footer-link"> Terms </a>
+                        </li>
+                        <li class="footer-bottom__li">
+                            <a href="#" class="footer-link">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__cards">
+                    <a href="#" class="footer__card"><img src="img/visa.png" alt="visa" class="footer-card__logo"></a>
+                    <a href="#" class="footer__card"><img src="img/mastercard.png" alt="mastercard" class="footer-card__logo"></a>
+                    <a href="#" class="footer__card"><img src="img/paypal.png" alt="paypal" class="footer-card__logo"></a>
+                </div>
+                <div class="footer__row">
+                    <a href="#" class="footer__select">$ USD
+                        <svg class="footer__select-arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__select">ru
+                        <svg class="footer__select-arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</footer>
+		<div>
+    <div class="popups popup__lang-curr">
+        <div class="popup">
+            <div class="popup__head">
+                <h2 class="popup__head-title">Язык и Валюта</h2>
+                <button type="button" class="close"></button>
+            </div>
+            <div class="popup-content">
+                <div class="popup__section">
+                    <h4 class="popup__title">Валюта</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">EUR</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox" checked>
+                            <span class="check"></span>
+                            <span class="check-text">USD</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">AZN</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">UAH</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">RUB</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">BEL</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">GEO</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">EAD</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Язык</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Английский</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Французский</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Немецкий</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Японский</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__bottom">
+                    <a href="#" class="btn btn-small">SAVE CHANGES
+                        <svg class="arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="popups popup__additional-filters">
+        <div class="popup positionTop">
+            <div class="popup__head">
+                <h2 class="popup__head-title">Дополнительные фильтры</h2>
+                <button type="button" class="close"></button>
+            </div>
+            <form class="popup-content">
+                <div class="popup__section">
+                    <label class="label-checkbox">
+                        <input type="checkbox" class="checkbox">
+                        <span class="check"></span>
+                        <span class="check-text">Возможность отмены</span>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" class="checkbox" checked>
+                        <span class="check"></span>
+                        <span class="check-text">Опытный хозяин
+                   <span class="check-span"> Останавливайтесь у самых гостеприимных хозяев <a href="#" class="c-blue">Подробнее</a></span>
+
+                </span>
+                    </label>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Удобства</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Кухня</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Шампунь</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Отопление</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Кондиционер</span>
+                        </label>
+                    </div>
+                    <a href="#" class="link-item">Все удобства
+                        <svg class="arrow c-blue">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Дополнительные удобства</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Бесплатная <br>парковка</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox" checked>
+                            <span class="check"></span>
+                            <span class="check-text">Спортзал</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Джакузи</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox" checked>
+                            <span class="check"></span>
+                            <span class="check-text">Бассейн</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Цена</h4>
+                    <div class="popup__row">
+                        <div class="popup__price" >
+                            <p>От</p>
+                            <input type="number" class="popup__input">
+                        </div>
+                        <div class="popup__price">
+                            <p>До</p>
+                            <input type="number" class="popup__input">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Язык хозяина</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Английский</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Французский</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Немецкий</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Японский</span>
+                        </label>
+                    </div>
+                    <a href="#" class="link-item">все языки
+                        <svg class="arrow c-blue">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="popup__bottom popup__bottom__between">
+                    <button type="reset" class="link-item">очистить <span class="close"></span></button>
+                    <button type="submit" class="btn btn-small">показать варианты
+                        <svg class="arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+	</div>
+
+
+	<script src="js/moment.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/jquery.daterangepicker.min.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+</html>

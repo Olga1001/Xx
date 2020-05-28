@@ -1,0 +1,1046 @@
+@import "fonts"
+@import "vars"
+
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+*:-moz-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+*::-moz-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+*:-ms-input-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+a
+  outline: none
+  text-decoration: none
+  color: #000000
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-family: "Gilroy-Regular", sans-serif
+  font-size: 14px
+  position: relative
+  line-height: normal
+  font-style: normal
+  font-weight: normal
+  color: #50575E
+
+img
+  display: block
+  object-fit: contain
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+/* Firefox */
+input[type=number]
+  -moz-appearance: textfield
+
+input, textarea
+  outline: none
+  resize: none
+  -webkit-appearance: none
+  padding: 24px 25px 6px
+  background: transparent
+  font-family: "Gilroy-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 15px
+  line-height: 36px
+  letter-spacing: 0.02em
+  color: #124570
+  border: 2px solid #EEF3F9
+  border-radius: 4px
+  box-sizing: border-box
+  width: 100%
+  transition: all 0.4s
+input
+  height: 70px
+input.input-date.active
+  background: #EEF3F9
+input.input-visitor, input.input-date
+  padding-right: 85px
+input.input-city:focus
+  border-color: #124570
+input.input-count
+  width: 36px
+  line-height: 38px
+  text-align: center
+  padding: 0
+  border: none
+  height: auto
+  &:hover
+    background: transparent
+button
+  cursor: pointer
+  outline: none
+  border: none
+  background: transparent
+
+button:focus
+  outline: none
+
+p
+  line-height: 15px
+  font-size: 15px
+  letter-spacing: 0
+  color: #707070
+
+strong
+  font-family: "Gilroy-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+
+.container
+  max-width: 1180px
+  padding: 0 20px
+  margin: 0 auto
+
+.header
+  position: relative
+  width: 100%
+  z-index: 8
+  &-row
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 100%
+    .header-nav
+      margin-right: 65px
+  &__between
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-nav
+    display: flex
+    align-items: center
+  &__selects
+    display: flex
+    &-item
+      margin-left: 30px
+    &-arrow
+      fill: #FFFFFF
+      stroke: #fff
+      width: 9px
+      height: 9px
+      margin-left: 6px
+.header-second
+  position: fixed
+  left: 0
+  width: 100%
+  top: 0
+  z-index: 9
+  background: #F0F8FF
+  .container
+    max-width: 100%
+    padding: 0 30px
+.menu
+  display: flex
+  align-items: center
+  &-item
+    margin-left: 65px
+    padding-right: 11px
+
+.link
+  font-family: "Gilroy-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 13px
+  display: flex
+  align-items: center
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  color: $color1
+  &:hover
+    text-decoration: underline
+
+.link-item
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  font-family: "Gilroy-SemiBold", sans-serif
+  font-weight: 600
+  font-size: 15px
+  line-height: 22px
+  margin-top: 30px
+  letter-spacing: 0.02em
+  color: #124570
+  padding: 0
+  .close
+    position: relative
+    width: 20px
+    height: 20px
+    right: 0
+    top: 0
+    margin-left: 15px
+  .close:before
+    width: 16px
+    height: 2px
+  .close:after
+    width: 2px
+    height: 16px
+
+.burger
+  position: relative
+  width: 62px
+  height: 42px
+  cursor: pointer
+  padding: 10px
+  display: none
+  margin-right: -10px
+  &-line
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    background: $color2
+    height: 2px
+    width: 42px
+  &-top
+    top: 15px
+  &-bottom
+    bottom: 15px
+.add
+  display: block
+  position: relative
+  background: #FF3535
+  border-radius: 3px
+  width: 24px
+  height: 24px
+  margin: 0 15px 0 0
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 10px
+    height: 2px
+    background: $color1
+  &:after
+    width: 2px
+    height: 10px
+.logo
+  font-family: "Rubik-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 25px
+  line-height: 75px
+  letter-spacing: 0.02em
+  color: #FF3535
+  display: flex
+  &-span
+    color: #292C31
+
+.in-catalog
+  padding: 21px 48px 18px
+  background: #EEF3F9
+  box-shadow: 0 0 65px rgba(95, 123, 148, 0.28)
+  border-radius: 5px 5px 0 0
+  width: fit-content
+
+.form-search
+  position: relative
+  z-index: 3
+
+.field
+  position: relative
+  display: flex
+  &:hover
+    .icon
+      background: #E5EDF5
+    input
+      background: #EEF3F9
+    input.input-count
+      background: transparent
+
+.dropdown
+  position: absolute
+  left: 0
+  top: 100%
+  z-index: 7
+  background: $color1
+  width: 100%
+  display: none
+  &.active
+    display: block
+  &-item
+    display: flex
+    justify-content: space-between
+    padding: 13px 10px 13px 25px
+    border-bottom: 2px solid #EEF3F9
+    .text-12
+      display: block
+      margin-top: 6px
+.count
+  display: flex
+  align-items: center
+  &-btn
+    background: #EEF3F9
+    border-radius: 3px
+    width: 38px
+    height: 38px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 12px
+      height: 2px
+      background: #124570
+  &-plus:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 2px
+    height: 12px
+    background: #124570
+
+
+.name
+  font-size: 14px
+  letter-spacing: 0.02em
+  color: #898989
+  position: absolute
+  left: 27px
+  top: 15px
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+  z-index: 1
+
+.icon
+  height: 100%
+  width: 65px
+  background: #EEF3F9
+  border-radius: 0 4px 4px 0
+  margin-left: -4px
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: all 0.4s
+  position: absolute
+  right: 0
+  top: 0
+
+.search
+  background: #FCFDFF
+  box-shadow: 0 0 65px rgba(95, 123, 148, 0.28)
+  border-radius: 5px
+  padding: 25px
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  transition: all 0.4s
+  &:hover
+    box-shadow: 0 0 65px rgba(95, 123, 148, 0.58)
+  .field
+    margin-right: 20px
+    width: 250px
+    &:nth-child(2)
+      max-width: 315px
+      width: 100%
+
+.btn
+  display: flex
+  align-items: center
+  line-height: 68px
+  justify-content: center
+  background: #FF3535
+  border-radius: 4px
+  width: 100%
+  max-width: 208px
+  font-family: "Gilroy-ExtraBold", sans-serif
+  font-style: normal
+  font-weight: 800
+  font-size: 15px
+  letter-spacing: 0.02em
+  color: $color1
+  transition: all 0.4s
+  &:hover
+    background: #FF4A4A
+    box-shadow: 0px 4px 25px rgba(255, 74, 74, 0.3)
+  &:active
+    background: #FF4A4A
+    box-shadow: none
+  &-white
+    border: 2px solid #EEF3F9
+    box-sizing: border-box
+    border-radius: 4px
+    padding: 13px 18px
+    font-size: 14px
+    letter-spacing: 0.02em
+    color: #898989
+    margin-right: 12px
+    transition: all 0.4s
+    display: flex
+    align-items: center
+    &:hover
+      background: #EEF3F9
+    .arrow-down
+      fill: #124570
+      stroke: #124570
+.btn-small
+  line-height: 55px
+  font-family: "Gilroy-SemiBold", sans-serif
+  font-weight: 600
+.btn-filter-all
+  .arrow
+    display: none
+.btn-light
+  background: #EEF3F9
+  border-radius: 4px
+  line-height: 60px
+  padding: 0 42px
+  font-family: "Gilroy-SemiBold", sans-serif
+  font-style: normal
+  font-weight: 600
+  font-size: 15px
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  color: #124570
+  display: flex
+  justify-content: center
+  align-items: center
+  width: fit-content
+  transition: all 0.4s
+  .arrow
+    fill: #124570
+    stroke: #124570
+  &:hover
+    background: #DEECFF
+
+.arrow
+  width: 13px
+  height: 13px
+  margin-left: 10px
+  fill: $color1
+  stroke: $color1
+  transform: rotate(-90deg)
+  display: block
+  transition: all 0.3s
+  &-down
+    transform: none
+  &.c-blue
+    fill: $color3
+    stroke: $color3
+.btn-arrow
+  background: #EEF3F9 no-repeat center / 12px
+  border-radius: 4px
+  width: 66px
+  height: 66px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-left: 30px
+.btn-prev
+  background-image: url("../img/arrow-right.svg")
+  transform: scale(-1,1)
+.btn-next
+  background-image: url("../img/arrow-right.svg")
+
+.easy-autocomplete
+  width: 100% !important
+
+.easy-autocomplete-container
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  background: #fff
+  border-radius: 0 0 4px 4px
+  overflow: hidden
+  z-index: 5
+  li:last-child .eac-item
+    border: none
+
+.eac-item
+  border-bottom: 2px solid #EEF3F9
+  font-family: "Gilroy-SemiBold", sans-serif
+  font-style: normal
+  font-weight: 600
+  font-size: 14px
+  line-height: 45px
+  letter-spacing: 0.02em
+  color: #414950
+  padding: 0 25px
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+
+.slick-track
+  display: flex
+
+.slide
+  outline: none
+  margin-right: 25px
+.slick-disabled
+  opacity: 0.6
+
+.checkbox
+  display: none
+  &:checked ~ .instant-reservation
+    fill: #124570
+  &:checked ~ .check
+    background: #EEF3F9 url("../img/check.svg") no-repeat center / 37%
+  &:checked ~ .check-reservation
+    background: #124570
+    color: #FFFFFF
+.footer
+  background: #F0F8FF
+  padding: 59px 0 0
+  &-text
+    color: #6E89A0
+    line-height: 20px
+  .logo
+    line-height: 1
+    margin-bottom: 12px
+  &-top
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    padding-bottom: 50px
+  &-main
+    font-family: "Gilroy-SemiBold", sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 15px
+    line-height: 1
+    letter-spacing: 0.02em
+    text-transform: uppercase
+    color: #124570
+    margin-bottom: 17px
+  &-link
+    font-size: 14px
+    line-height: 30px
+    letter-spacing: 0.02em
+    color: #6E89A0
+    transition: all 0.4s
+    &:hover, &:focus, &:active
+      color: #124570
+  &-review
+    color: #124570
+    font-family: "Gilroy-SemiBold", sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 20px
+    letter-spacing: 0.02em
+    margin-top: 28px
+    display: block
+  &-bottom
+    padding: 30px 0
+    border-top: 1px solid #EAF2FA
+    &__row
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+    &__ul
+      display: flex
+    &__li
+      margin-right: 30px
+      margin-top: 10px
+    .footer-link
+      font-family: "Gilroy-Light", sans-serif
+      color: rgba(110, 137, 160, 0.6)
+      &:hover
+        color: #124570
+
+    &__first
+      width: 35.5%
+
+  &__card
+    margin-right: 60px
+    &:last-child
+      margin-right: 0
+  &__cards
+    display: flex
+    align-items: center
+    width: 43%
+  &__row
+    display: flex
+    width: 21.5%
+  &__select
+    display: flex
+    align-items: center
+    font-family: "Gilroy-Bold", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 13px
+    letter-spacing: 0.02em
+    text-transform: uppercase
+    color: #124570
+    margin-right: 56px
+    line-height: 34px
+    height: fit-content
+    &:last-child
+      margin-right: 0
+    &:hover
+      text-decoration: underline
+    &-arrow
+      fill: #124570
+      stroke: #124570
+      width: 10px
+      height: 10px
+      margin-left: 6px
+
+.col
+  width: 21.5%
+  padding-right: 20px
+  &:last-child
+    padding-right: 0
+    padding-left: 20px
+  &:nth-child(3n+3)
+    padding-right: 0
+  &:first-child
+    width: 35.5%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.markets
+  margin-top: 20px
+  display: flex
+  flex-wrap: wrap
+  &-img
+    height: auto
+    max-width: 122px
+    width: 100%
+  a
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
+.markets-mob
+  display: none
+.img-search
+  width: 16px
+  height: 16px
+  margin-right: 8px
+  fill: $color1
+
+.img-card
+  width: 36px
+  height: 28px
+  display: initial
+  margin-right: 20px
+
+.img-star
+  width: 14px
+  height: 14px
+  margin-right: 10px
+
+.img-lightning
+  margin-right: 10px
+  width: 9px
+  height: 16px
+
+//.overlay
+//  position: fixed
+//  left: 0
+.popups
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 99
+  background: rgba(#000000, 0.2)
+  transition: all 0.4s
+  opacity: 0
+  pointer-events: none
+  &.active
+    opacity: 1
+    pointer-events: auto
+
+.close
+  position: absolute
+  right: 19px
+  top: 15px
+  width: 30px
+  height: 30px
+  z-index: 9
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%) rotate(45deg)
+    height: 2px
+    width: 22px
+    background: #124570
+  &:after
+    height: 22px
+    width: 2px
+
+.popup
+  background: #FCFDFF
+  box-shadow: 0 4px 30px rgba(152, 152, 152, 0.4)
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  max-width: 555px
+  width: 100%
+  transition: all 0.4s
+  margin: 0
+  &-content
+    overflow-y: auto
+    height: calc(100% - 62px)
+  &.active
+    opacity: 1
+    pointer-events: auto
+  &.positionTop
+    height: calc(100% - 40px)
+  &__head
+    border-bottom: 2px solid #EAF2FA
+    padding: 0 65px
+    &-title
+      font-family: "Merriweather-Bold", sans-serif
+      text-align: center
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 60px
+      color: #000000
+  &__section
+    padding: 35px 45px 35px 65px
+    border-bottom: 2px solid #EAF2FA
+  &__title
+    font-family: "Merriweather-Bold", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 30px
+    color: #000000
+    margin-bottom: 20px
+  &__row
+    display: flex
+    flex-wrap: wrap
+    .label-checkbox
+      width: 50%
+      &:last-child
+        margin-bottom: 0
+      &:nth-last-child(2)
+        margin-bottom: 0
+  &__bottom
+    padding: 25px 45px 25px 65px
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+    align-items: center
+    .link-item
+      margin: 0 10px 0 0
+      padding: 20px 0
+    &__between
+      justify-content: space-between
+    .btn
+      padding: 0 20px
+      width: 270px
+      max-width: none
+      position: relative
+      text-transform: uppercase
+      .arrow
+        position: absolute
+        right: 35px
+  &__additional-filters
+    .popup__bottom .btn  .arrow
+      right: 25px
+  &__price
+    width: 50%
+    position: relative
+    p
+      position: absolute
+      left: 20px
+      top: 12px
+      font-size: 14px
+      line-height: 20px
+      letter-spacing: 0.02em
+      color: #898989
+
+input.popup__input
+  font-family: "Gilroy-Regular", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 20px
+  letter-spacing: 0.02em
+  padding: 12px 20px 12px 39px
+  height: 45px
+  color: #50575E
+  max-width: 123px
+  appearance: none
+
+.label-checkbox
+  margin-bottom: 20px
+  display: flex
+
+.check
+  background: #EEF3F9
+  border-radius: 4px
+  width: 40px
+  height: 40px
+  display: block
+  margin-right: 15px
+  flex-shrink: 0
+
+.check-text
+  margin-top: 9px
+  font-size: 15px
+  line-height: 22px
+
+.check-span
+  font-size: 14px
+  color: #898989
+  margin-top: 10px
+  display: block
+  line-height: 20px
+
+.pagination
+  display: flex
+  justify-content: center
+  align-items: center
+
+.page-link
+  line-height: 30px
+  min-width: 30px
+  margin: 0 4.5px
+  display: block
+  font-family: "Gilroy-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 16px
+  letter-spacing: 0.02em
+  color: #124570
+  border-radius: 3px
+  text-align: center
+  &:hover
+    background: #EEF3F9
+  &.active
+    background: #124570
+    color: $color1
+
+.page-arrow
+  width: 66px
+  height: 66px
+  border-radius: 4px
+  display: block
+  margin: 0 10px
+
+.page-prev
+  background: #EEF3F9 url("../img/arrow-right.svg") no-repeat center / 15%
+  transform: scale(-1,1)
+
+.page-next
+  background: #EEF3F9 url("../img/arrow-right.svg") no-repeat center / 15%
+
+.title-main
+  font-family: "Merriweather-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 46px
+  line-height: 60px
+  color: #292C31
+
+.title
+  font-family: "Merriweather-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 36px
+  line-height: 60px
+  color: #292C31
+
+.text-17
+  font-family: "Gilroy-SemiBold", sans-serif
+  font-style: normal
+  font-weight: 600
+  font-size: 17px
+  text-transform: uppercase
+  color: #124570
+
+.text-16
+  font-family: "Gilroy-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 16px
+  line-height: 22px
+  letter-spacing: 0.02em
+  color: #124570
+
+.text-15
+  font-size: 15px
+  font-family: "Gilroy-SemiBold", sans-serif
+  font-style: normal
+  font-weight: 600
+  letter-spacing: 0.02em
+  color: $color1
+
+.text-12
+  font-size: 12px
+  letter-spacing: 0.02em
+  color: #898989
+
+.bg-light-blue
+  background-color: #F0F8FF
+.bg-light-pink
+  background-color: #FCE3E3
+.bg-light-yellow
+  background-color: rgba(221, 159, 0, 0.08)
+.d-md-block
+  display: none
+.d-block
+  display: block
+
+@import "../components/pages/main/style"
+@import "../components/pages/catalog/style"
+
+.c-blue
+  color: $color3
+.c-dark
+  color: $color2
+  .header__selects-arrow
+    fill: $color2
+    stroke: $color2
+.c-white
+  color: $color1
+.c-gray
+  color: #414950
+.c-gray-light
+  color: #D0D0D0
+
+.date-picker-wrapper .drp_top-bar
+  display: none
+.date-picker-wrapper.no-topbar, .date-picker-wrapper
+  z-index: 99
+  padding: 10px 15px 0
+  background: #FCFDFF
+  box-shadow: 0px 15px 20px rgba(121, 121, 121, 0.25)
+  border-radius: 4px
+  border: none
+  max-width: 285px
+  &:hover ~ .reservation__content .search .field .input-date
+    background: #EEF3F9
+.date-picker-wrapper .month-wrapper
+  padding: 0
+  border: none
+.date-picker-wrapper table .caption
+  background: #EEF3F9
+  border-radius: 3px
+  font-family: "Gilroy-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 14px
+  letter-spacing: 0.02em
+  color: #124570
+.date-picker-wrapper .month-wrapper table
+  width: 100%
+.date-picker-wrapper table .caption .next, .date-picker-wrapper table .caption .prev
+  color: transparent
+  background: url("../img/arrow-right.svg") no-repeat center / contain
+  width: 13px
+  height: 13px
+  display: block
+  padding: 0
+  margin: 0 15px
+.date-picker-wrapper table .caption .prev
+  transform: scale(-1,1)
+.date-picker-wrapper table .caption .next:hover, .date-picker-wrapper table .caption .prev:hover
+  background-color: transparent
+  color: transparent
+.date-picker-wrapper .month-wrapper table
+  .week-name
+    margin: 20px 0 10px
+    th
+      padding: 30px 0 20px
+  thead
+    th
+      font-family: "Gilroy-Bold", sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 13px
+      line-height: 1
+      text-align: center
+      letter-spacing: 0.05em
+      color: #414950
+      padding: 10px 0
+  .day
+    width: 100%
+    height: 30px
+    margin: 0 0 10px 0!important
+    padding: 0!important
+    font-family: "Gilroy-Regular", sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    text-align: center
+    letter-spacing: 0.05em
+    color: #2A2A2A
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 3px
+.date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected
+  background: #124570!important
+  border-radius: 3px!important
+.date-picker-wrapper .month-wrapper table .day.lastMonth, .date-picker-wrapper .month-wrapper table .day.nextMonth
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #D5D5D5!important
+.date-picker-wrapper .month-wrapper table .day.checked, .date-picker-wrapper .month-wrapper table .day.toMonth.hovering
+  background: #EEF3F9
+  border-radius: 0
+.dp-clearfix
+  display: none
+@import "media"
+// Всегда в конце

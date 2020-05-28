@@ -1,0 +1,305 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width : 768px)
+  .d-md-block
+    display: block
+
+@media only screen and (max-width : 1179px)
+  .search
+    .field, .btn
+      width: calc(50% - 15px)
+      max-width: none
+      margin-bottom: 20px
+    .field:nth-child(2)
+      max-width: none
+      width: calc(50% - 15px)
+      margin-right: 0
+  .search
+    padding: 20px 20px 0 20px
+  .row-slider .slick-list
+    margin: 0
+    padding: 0 0 40px 0
+  .search-result, .search-result__btn
+    display: none
+  .catalog-content
+    padding: 30px 20px
+    max-width: 745px
+    .search-result
+      display: flex
+      margin: 0 0 30px
+  .search-result__item
+    width: 33.33%
+    min-width: auto
+    padding: 0 10px
+  .card-item .card-top
+    width: 26vw
+  #map
+    width: calc(100% - 745px)
+  .catalog-list
+    display: flex
+    flex-wrap: wrap
+    .card, .card:nth-child(3n+3)
+      width: calc(50% - 11px)
+      margin-right: 22px
+    .card:nth-child(2n+2)
+      margin-right: 0
+    .card-content
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+  .card-col
+    height: 100%
+  .header-row
+    justify-content: flex-end
+  .card-content
+    position: initial
+@media only screen and (max-width : 1024px)
+  .connect-item
+    width: calc(33.33% - 27px)
+    margin-right: 40px
+  .connect-item:before
+    width: 40px
+  .connect-item__head
+    padding: 10px 15px
+
+@media only screen and (max-width : 991px)
+  .row-slider .slide
+    opacity: 1
+  .card, .card:nth-child(3n+3)
+    width: calc(50% - 11px)
+    margin-right: 22px
+  .card:nth-child(2n+2)
+    margin-right: 0
+  .reservation-img
+    width: 44%
+  .header__selects .link
+    color: #292C31
+  .header__selects-arrow
+    fill: #292C31
+    stroke: #292C31
+  .footer__card
+    margin-right: 30px
+    transform: scale(0.8)
+  .footer__select
+    margin-right: 25px
+  .header__selects
+    margin-right: 10vw
+  #map
+    display: none
+  .catalog-content
+    max-width: 100%
+@media only screen and (max-width : 767px)
+  .header__selects
+    margin-right: 0
+  .title
+    font-size: 28px
+    line-height: 34px
+    text-align: center
+  .connect-item
+    width: 100%
+    margin-right: 0
+  .connect-item:before
+    left: 50%
+    transform: translateX(-50%) rotate(90deg)
+    top: calc(100% + 43px)
+    width: 75px
+    background-position: center top
+  .title-main
+    font-size: 40px
+    line-height: 48px
+    text-align: center
+  .row-slider .card
+    max-width: 100%
+    margin: 0 auto
+  .row-slider .slide
+    margin: 0
+  .card, .card:nth-child(3n+3)
+    width: 100%
+    margin-right: 0
+  .col:first-child
+    width: 100%
+  .col
+    width: 46%
+    margin-bottom: 30px
+    &:nth-child(3)
+      width: 54%
+  .col:last-child
+    padding-left: 0
+  .reservation-img
+    display: none
+  .burger
+    display: block
+  .header-nav
+    flex-direction: row-reverse
+  .link
+    color: #292C31
+  .header__selects-item, .menu-item
+    margin: 0 30px
+  .logo
+    line-height: 60px
+  .header
+    border-bottom: 2px solid #D9E8F5
+  .reservation__content
+    padding: 29px 0 60px
+  .reservation
+    min-height: auto
+  .reservation__content .text-15
+    justify-content: center
+  .reservation__content .title-main
+    margin: 10px 0 22px
+  .in-catalog
+    width: 100%
+    text-align: center
+    padding: 21px 20px 18px
+  .search .field, .search .btn, .search .field:nth-child(2)
+    width: 100%
+    margin-right: 0
+    margin-bottom: 15px
+  .search
+    padding: 25px 23px 11px
+  .popular-item, .popular-item:nth-child(4n+4)
+    width: calc(33.33% - 10px)
+    margin-right: 15px
+  .popular-item:nth-child(3n+3)
+    margin-right: 0
+  .footer-bottom__first
+    width: 100%
+  .footer__cards, .footer__row
+    display: none
+  .watched
+    padding: 49px 0 40px
+  .row-slider
+    padding-top: 24px
+    padding-bottom: 65px
+  .row-slider .btn-arrow
+    top: auto
+    bottom: 0
+    transform: translateX(50%)
+  .row-slider .btn-prev
+    right: calc(50% + 47px)
+    transform: translateX(50%) scale(-1, 1)
+  .row-slider .btn-next
+    right: calc(50% - 47px)
+  .offers
+    padding-bottom: 155px
+  .offers .btn
+    position: absolute
+    left: 0
+    bottom: 60px
+    max-width: none
+  .offers-row
+    margin-bottom: 0
+  .card-img
+    height: 55vw
+  .popular
+    padding: 44px 0 60px
+  .text-17
+    font-size: 14px
+  .popular-row
+    margin-top: 10px
+  .connect
+    padding: 50px 0 100px
+    .btn-light
+      position: absolute
+      left: 20px
+      bottom: 58px
+      width: calc(100% - 40px)
+  .connect__head
+    margin-bottom: 32px
+  .connect-item__head
+    padding: 10px 26px
+  .footer-top__row
+    display: flex
+    align-items: center
+  .footer
+    padding: 52px 0 0 0
+  .footer .logo
+    margin: 0 55px 0 0
+  .markets
+    display: none
+  .markets-mob
+    display: block
+    width: 54%
+  .markets-img
+    width: 100%
+    max-width: 194px
+    margin-bottom: 20px
+  .col
+    margin-bottom: 45px
+  .footer-top
+    padding-bottom: 0
+  .footer-bottom
+    padding: 20px 0
+  .popup__section, .popup__bottom
+    padding: 20px
+  .popup
+    width: calc(100% - 40px)
+    margin: 0
+  .catalog-list .card
+    width: 100%!important
+    margin: 17px 0 0 0
+  .catalog__head-row
+    display: none
+  .btn-white.hide, label.hide
+    display: none
+  .btn-white
+    width: calc(50% - 5px)
+    margin: 0 10px 0 0
+    &:nth-child(2)
+      margin-right: 0
+  .btn-filter-all
+    width: 100%
+    background: #EEF3F9
+    margin: 10px 0
+    color: #124570
+    font-family: "Gilroy-SemiBold", sans-serif
+    font-weight: 600
+    text-transform: uppercase
+    justify-content: center
+    .arrow
+      display: block
+  .catalog
+    padding-top: 60px
+  .catalog-list
+    .price-crossed
+      font-size: 16px
+  .header-row .header-nav
+    margin: 0
+  .header-row
+    justify-content: center
+  .price-item
+    font-size: 20px
+  .card-info
+    display: none
+  .price
+    .c-blue
+      display: block
+      font-size: 12px
+  .catalog-content .search-result
+    margin-bottom: 10px
+  .popup__head
+    padding: 0 30px
+  .close
+    right: 0
+    top: 0
+  .close:before
+    width: 16px
+    height: 2px
+  .close:after
+    width: 2px
+    height: 16px
+  .card-slider .slick-arrow
+    opacity: 1
+  .popup__head-title
+    font-size: 18px
+@media only screen and (max-width : 575px)
+  .popup__bottom__between
+    flex-direction: column-reverse
+    align-items: flex-end
+
+

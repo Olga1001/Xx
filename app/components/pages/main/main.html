@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>title</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=400, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/daterangepicker.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="wrapper-content">
+			<div class="reservation">
+				@import "header.html"
+				<div class="container">
+					<div class="reservation-img"></div>
+					<div class="reservation__content">
+						<p class="text-15">
+							<img src="img/pay.svg" alt="pay" class="img-card">
+
+							Онлайн оплата
+						</p>
+						<h1 class="title-main">
+							Мгновенное <br> бронирование <br> квартир
+						</h1>
+						<form class="form-search">
+							<div class="in-catalog"><p class="text-15">В каталоге 3842 квартиры</p></div>
+							<div class="search">
+								<div class="field">
+									<p class="name">Город</p>
+									<input type="text" class="input-city" id="js-easyAutocomplete" required>
+								</div>
+								<div class="field">
+									<p class="name">Прибытие и выезд</p>
+									<input type="text" class="input-date" name="daterange" required>
+									<div class="icon"><img src="img/calendar.svg" alt="calendar" class="img-calendar"></div>
+								</div>
+								<div class="field">
+									<p class="name">Гостей</p>
+									<input type="text" value="1 человек" class="input-visitor" readonly required>
+									<div class="icon"><img src="img/person.svg" alt="person" class="img-person"></div>
+									<ul class="dropdown">
+										<li class="dropdown-item">
+											<p class="c-gray">Взрослые
+												<span class="text-12">от 13 лет</span>
+											</p>
+											<div class="count ">
+												<button type="button" class="count-btn count-minus "></button>
+												<input type="text" class="input-count count__adults" value="1" readonly>
+												<button type="button" class="count-btn count-plus"></button>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<p class="c-gray">Дети
+												<span class="text-12">до 12 лет</span>
+											</p>
+											<div class="count">
+												<button type="button" class="count-btn count-minus "></button>
+												<input type="text" class="input-count count__children" value="0" readonly>
+												<button type="button" class="count-btn count-plus"></button>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<button type="submit" class="btn">
+									<svg class="img-search">
+										<use xlink:href="img/sprite/sprite.svg#search"></use>
+									</svg>
+									ПОИСК</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+			<div class="container">
+				<section class="watched">
+					<h2 class="title">Недавно просмотренные</h2>
+					<div class="row-slider">
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span class="price-crossed">$50</span>
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span class="price-crossed">$50</span>
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+										<div class="price">
+											<div class="price-row">
+												<span class="price-crossed">$50</span>
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="card">
+								<div class="card-top">
+									<img src="img/foto.jpg" alt="image room" class="card-img">
+									<div class="discount">-10%</div>
+									<div class="card-top__info">
+										<a href="#" class="text-15 c-white">2 комнаты</a>
+										<div class="star">
+											<img src="img/star.svg" alt="star" class="img-star">
+											<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-content">
+									<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+									<div class="card-row">
+										<a href="#" class="location">
+											<span class="pin"></span>
+											<p>
+												<span>ул. Зарифа Алиева, 28</span>
+												0,5 км от центра
+											</p>
+										</a>
+
+										<div class="price">
+											<div class="price-row">
+												<span class="price-crossed">$50</span>
+												<span>$45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label class="card-bottom">
+									<input type="checkbox" class="checkbox">
+									<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+									<svg class="instant-reservation">
+										<use xlink:href="img/sprite/sprite.svg#heart"></use>
+									</svg>
+								</label>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="offers">
+					<div class="offers-row">
+						<h2 class="title">Лучшие предложения в Баку</h2>
+						<a href="#" class="btn btn-small" id="more-apartaments"><span>ВСЕ КВАРТИРЫ</span>
+							<svg class="arrow">
+								<use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="offers-cards">
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="discount">-10%</div>
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="discount">-10%</div>
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="discount">-10%</div>
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+						<div class="card">
+							<div class="card-top">
+								<img src="img/foto.jpg" alt="image room" class="card-img">
+								<div class="card-top__info">
+									<a href="#" class="text-15 c-white">2 комнаты</a>
+									<div class="star">
+										<img src="img/star.svg" alt="star" class="img-star">
+										<span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-content">
+								<a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+								<div class="card-row">
+									<a href="#" class="location">
+										<span class="pin"></span>
+										<p>
+											<span>ул. Зарифа Алиева, 28</span>
+											0,5 км от центра
+										</p>
+									</a>
+									<div class="price">
+										<div class="price-row">
+											<span class="price-crossed">$50</span>
+											<span>$45</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label class="card-bottom">
+								<input type="checkbox" class="checkbox">
+								<span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+								<svg class="instant-reservation">
+									<use xlink:href="img/sprite/sprite.svg#heart"></use>
+								</svg>
+							</label>
+						</div>
+					</div>
+				</section>
+			</div>
+			<section class="popular">
+				<div class="container">
+					<h2 class="title">Популярные направления</h2>
+					<ul class="popular-row">
+
+						<li class="popular-item">
+							<a href="#" class="text-17">баку</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">тбилиси</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">минск</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">баку</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">тбилиси</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">минск</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">баку</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">тбилиси</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">минск</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">баку</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">тбилиси</a>
+						</li>
+						<li class="popular-item">
+							<a href="#" class="text-17">минск</a>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+			<section class="connect">
+				<div class="container">
+					<div class="connect__head">
+						<h2 class="title">Как подключиться к сервису</h2>
+						<a href="#" class="btn-light"><span>регистрация</span>
+							<svg class="arrow">
+								<use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+							</svg>
+						</a>
+					</div>
+
+					<div class="connect-row">
+						<div class="connect-item">
+							<div class="connect-item__head">
+								<p class="connect-item__number">1</p>
+								<p> регистрация  <span> (2 мин) </span></p>
+							</div>
+							<div class="connect-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore.  Ut enim ad minim veniam, quis nostrud.
+								</p>
+							</div>
+
+						</div>
+						<div class="connect-item">
+							<div class="connect-item__head">
+								<p class="connect-item__number">2</p>
+								<p> добавление квартиры  <span>  (6 мин) </span></p>
+							</div>
+							<div class="connect-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore.  Ut enim ad minim veniam, quis nostrud.
+								</p>
+							</div>
+						</div>
+						<div class="connect-item">
+							<div class="connect-item__head">
+								<p class="connect-item__number">3</p>
+								<p> получение денег    <span> (мгновенно) </span></p>
+							</div>
+							<div class="connect-content">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore.  Ut enim ad minim veniam, quis nostrud.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+				
+		</div>
+		@import "footer.html"
+		@import "popups.html"
+	</div>
+
+
+	<script src="js/moment.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/jquery.daterangepicker.min.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+</html>

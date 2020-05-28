@@ -1,0 +1,274 @@
+.reservation
+  position: relative
+  min-height: 711px
+  background-color: #E7EFF6
+  &-img
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+    width: 59%
+    height: 100%
+    background: url("../img/img-main.jpg") no-repeat center / cover
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 100%
+      height: 170px
+      background: linear-gradient(to top, rgba(0, 11, 33, 0) 0%, #06122C 100%)
+      z-index: 1
+  &__content
+    padding: 42px 0
+    .title-main
+      margin: 25px 0 55px
+    .text-15
+      color: $color3
+      text-transform: uppercase
+      display: flex
+      align-items: center
+.watched
+  padding: 97px 0 75px
+.row-slider
+  padding-top: 18px
+  position: relative
+  .card
+    width: 100%
+    max-width: 365px
+    margin-right: 0
+  .slide
+    opacity: 0
+    transition: all 0.3s ease
+  .slick-active
+    opacity: 1
+  .slick-list
+    overflow: hidden
+    padding: 0 20px 40px 20px
+    margin: 0 -20px
+
+  .btn-arrow
+    position: absolute
+    right: 0
+    top: -65px
+  .btn-prev
+    right: 96px
+
+.card
+  border-radius: 4px
+  overflow: hidden
+  box-shadow: 0 4px 25px #ECEDEF
+  margin-top: 24px
+  flex-shrink: 0
+  transition: all 0.3s
+  margin-right: 22px
+  width: calc(33.33% - 15px)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  position: relative
+  &:nth-child(3n+3)
+    margin-right: 0
+  &:hover
+    box-shadow: 0 4px 25px #DDDDDD
+  &-img
+    width: 100%
+    height: 220px
+    object-fit: cover
+  &-top
+    position: relative
+    width: 100%
+    &__info
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      padding: 15px 20px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      z-index: 2
+  &-content
+    padding: 20px
+    position: relative
+  &-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 17px 0 8px
+  &-bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: #EEF3F9
+    padding: 13px 24px
+    cursor: pointer
+    span
+      color: #124570
+      font-size: 13px
+      line-height: 18px
+      letter-spacing: 0.02em
+      display: flex
+      align-items: end
+    &:hover
+      .instant-reservation
+        fill: #124570
+
+.instant-reservation
+  fill: transparent
+  stroke: #124570
+  width: 19px
+  height: 17px
+  stroke-width: 1.2
+.location
+  display: flex
+  align-items: center
+  span, p
+    display: block
+    line-height: 22px
+
+
+.pin
+  background: #EEF3F9 url("../img/pin.svg") no-repeat center / 12px 17px
+  width: 39px
+  height: 39px
+  flex-shrink: 0
+  border-radius: 4px
+  margin-right: 9px
+
+.star
+  display: flex
+  align-items: center
+
+.price
+  font-family: "Gilroy-Medium", sans-serif
+  font-weight: 500
+  font-size: 30px
+  line-height: 22px
+  letter-spacing: 0.02em
+  color: #FF3535
+  &-row
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+  .c-blue
+    display: none
+    text-align: right
+  &-crossed
+    text-decoration: line-through
+    font-family: "Gilroy-Light", sans-serif
+    font-weight: 300
+    font-size: 18px
+    line-height: 22px
+    color: #979798
+    margin-right: 6px
+
+.discount
+  position: absolute
+  right: 0
+  top: 0
+  background: #FF3535
+  font-family: "Gilroy-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 17px
+  line-height: 35px
+  letter-spacing: 0.02em
+  color: $color1
+  padding: 0 14px
+  z-index: 2
+  text-align: center
+
+.offers
+  padding: 0 0 115px
+  position: relative
+  &-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: 17px
+  &-cards
+    display: flex
+    flex-wrap: wrap
+
+.popular
+  padding: 103px 0 115px
+  background-color: #E7EFF6
+  &-row
+    display: flex
+    flex-wrap: wrap
+    margin-top: 34px
+  &-item
+    border-bottom: 1px solid rgba(47, 92, 130, 0.14)
+    width: calc(25% - 23px)
+    margin-right: 30px
+    &:nth-child(4n+4)
+      margin-right: 0
+    .text-17
+      padding: 26px 0
+      display: block
+      &:hover
+        text-decoration: underline
+
+.connect
+  padding: 102px 0 58px
+  position: relative
+  &__head
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 50px
+  &-row
+    display: flex
+    flex-wrap: wrap
+  &-content
+    padding: 22px 25px
+  &-item
+    width: calc(33.33% - 60px)
+    margin-right: 89px
+    border-radius: 4px
+    background: #FCFDFF
+    box-shadow: 0 4px 25px #ECEDEF
+    margin-bottom: 65px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 100%
+      top: 23px
+      background: url("../img/dashed.png") no-repeat center / cover
+      width: 89px
+      height: 2px
+    p
+      line-height: 22px
+    &:nth-child(3n+3), &:last-child
+      margin-right: 0
+      &:before
+        content: none
+
+    &__head
+      min-height: 50px
+      padding: 10px 25px
+      background: #124570
+      border-radius: 4px 4px 0 0
+      display: flex
+      align-items: center
+      p
+        font-family: "Gilroy-ExtraBold", sans-serif
+        font-weight: 800
+        font-size: 14px
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        color: $color1
+      span
+        color: #D4E9FB
+
+    &__number
+      color: $color1
+      display: inline-block
+      margin-right: 20px
+
+

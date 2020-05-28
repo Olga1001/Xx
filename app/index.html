@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=400, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div id="wrapper">
+    <!-- header.html -->
+<header class="header header-second">
+    <div class="container">
+        <div class="header__between">
+            <a href="#" class="logo">Xx
+                <span class="logo-span">.</span>
+            </a>
+             <div class="header-row">
+                <div class="search-result">
+                    <div class="search-result__item">Баку</div>
+                    <div class="search-result__item">10.10 - 20.10</div>
+                    <div class="search-result__item">3 человека</div>
+                    <a href="#" class="search-result__btn">
+                        <svg class="search-result__icon">
+                            <use xlink:href="img/sprite/sprite.svg#search"></use>
+                        </svg>
+                    </a>
+                </div>
+                <nav class="header-nav">
+                    <ul class="menu">
+                        <li class="menu-item d-md-block">
+                            <a href="#" class="link c-dark">
+                                <span class="add"></span>
+                                добавить квартиру
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="link link-sign-in c-dark">
+                                ВХОД
+                            </a>
+                        </li>
+                        <li class="menu-item header__selects-item">
+                            <a href="#" class="link c-dark">RU
+                                <svg class="header__selects-arrow">
+                                    <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+             </div>
+            <button type="button" class="burger d-block">
+                    <span class="burger-line burger-top"></span>
+                    <span class="burger-line burger-bottom"></span>
+                </button>
+        </div>
+    </div>
+</header>
+
+
+
+    <div id="wrapper-content">
+        <div class="catalog">
+            <div class="catalog-content">
+                <div class="search-result">
+                    <div class="search-result__item">Баку</div>
+                    <div class="search-result__item">10.10 - 20.10</div>
+                    <div class="search-result__item">3 человека</div>
+                    <a href="#" class="search-result__btn">
+                        <svg class="search-result__icon">
+                            <use xlink:href="img/sprite/sprite.svg#search"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="catalog__head">
+                    <div class="catalog__head-row">
+                        <h2 class="title">Жилье в Баку</h2>
+                        <div class="sorting">
+                            <button class="btn-light"><span>ОТ ДЕШЕВЫХ</span>
+                                <svg class="arrow arrow-down">
+                                    <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </button>
+                            <div class="sorting-drop">
+                                <ul class="sorting-menu">
+                                    <li class="sorting-option active">ОТ ДЕШЕВЫХ</li>
+                                    <li class="sorting-option">ОТ дорогих</li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="btns-filter">
+                        <a href="#" class="btn-white btn-filter">Цена</a>
+                        <a href="#" class="btn-white btn-filter">Количество комнат</a>
+                        <a href="#" class="btn-white btn-filter hide">Метро</a>
+                        <a href="#" class="btn-white btn-filter btn-filter-all ">
+                            Все Фильтры
+                            <svg class="arrow arrow-down">
+                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </a>
+                        <label class="hide">
+                            <input type="checkbox" class="checkbox">
+                            <span class="btn-white check-reservation">Мгновенная бронь</span>
+                        </label>
+                      
+                    </div>
+                </div>
+                <ul class="catalog-list" id="catalog-list">
+                    <li class="card-item">
+                        <div class="card-top">
+                            <div class="card-slider">
+                                <div class="slide">
+                                    <img src="img/foto.jpg" alt="image room" class="card-img">
+                                </div>
+                                <div class="slide">
+                                    <img src="img/foto.jpg" alt="image room" class="card-img">
+                                </div>
+                                <div class="slide">
+                                    <img src="img/foto.jpg" alt="image room" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-top__info">
+                                <a href="#" class="text-15 c-white">2 комнаты</a>
+                                <div class="star">
+                                    <img src="img/star.svg" alt="star" class="img-star">
+                                    <span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-col">
+                            <div class="card-content">
+                                <div class="discount">-10%</div>
+                                <a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+                                <div class="card-info">
+                                    <div class="card-info__left">
+                                        <p class="card-info__item bg-light-yellow">Опытный владелец</p>
+                                        <p class="card-info__item bg-light-pink">Редкая находка</p>
+                                    </div>
+                                    <p class="c-blue">Всего $180</p>
+                                </div>
+                                <div class="card-row">
+                                    <a href="#" class="location">
+                                        <span class="pin"></span>
+                                        <p>
+                                            <span class="address" data-lat="40.371950" data-lng="49.846418">ул. Зарифа Алиева, 28</span>
+                                            0,5 км от центра
+                                        </p>
+                                    </a>
+                                    <div class="price">
+                                        <span class="c-blue">Всего $180</span>
+                                        <div class="price-row">
+                                            <span class="price-crossed">$50</span>
+                                            <span class="price-item" >$45</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="card-bottom">
+                                <input type="checkbox" class="checkbox">
+                                <span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+                                <svg class="instant-reservation">
+                                    <use xlink:href="img/sprite/sprite.svg#heart"></use>
+                                </svg>
+                            </label>
+                        </div>
+
+
+                    </li>
+                    <li class="card-item">
+                        <div class="card-top">
+                            <div class="card-slider">
+                                <div class="slide">
+                                    <img src="img/foto.jpg" alt="image room" class="card-img">
+                                </div>
+                                <div class="slide">
+                                    <img src="img/foto.jpg" alt="image room" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-top__info">
+                                <a href="#" class="text-15 c-white">2 комнаты</a>
+                                <div class="star">
+                                    <img src="img/star.svg" alt="star" class="img-star">
+                                    <span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-col">
+                            <div class="card-content">
+                                <a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+                                <div class="card-info">
+                                    <div class="card-info__left"></div>
+                                    <p class="c-blue">Всего $180</p>
+                                </div>
+                                <div class="card-row">
+                                    <a href="#" class="location">
+                                        <span class="pin"></span>
+                                        <p>ул. Зарифа Алиева, 2
+                                            <span>0,5 км от центра</span>
+                                        </p>
+                                    </a>
+                                    <div class="price">
+                                        <span class="c-blue">Всего $180</span>
+                                        <div class="price-row">
+                                            <span class="price-item">$45</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="card-bottom">
+                                <input type="checkbox" class="checkbox">
+                                <span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+                                <svg class="instant-reservation">
+                                    <use xlink:href="img/sprite/sprite.svg#heart"></use>
+                                </svg>
+                            </label>
+                        </div>
+
+
+                    </li>
+                    <li class="card-item">
+                        <div class="card-top">
+                            <div class="card-slider">
+                                <div class="slide">
+                                    <img src="img/foto.jpg" alt="image room" class="card-img">
+                                </div>
+                                <div class="slide">
+                                    <img src="img/foto.jpg" alt="image room" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-top__info">
+                                <a href="#" class="text-15 c-white">2 комнаты</a>
+                                <div class="star">
+                                    <img src="img/star.svg" alt="star" class="img-star">
+                                    <span class="text-15">5,0 <span class="c-gray-light"> (98)</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-col">
+                            <div class="card-content">
+                                <a href="#" class="text-16">Просторная и современная квартира в центре города</a>
+                                <div class="card-info">
+                                    <div class="card-info__left"></div>
+                                    <p class="c-blue">Всего $180</p>
+                                </div>
+                                <div class="card-row">
+                                    <a href="#" class="location">
+                                        <span class="pin"></span>
+                                        <p>ул. Зарифа Алиева, 2
+                                            <span>0,5 км от центра</span>
+                                        </p>
+                                    </a>
+                                    <div class="price">
+                                        <span class="c-blue">Всего $180</span>
+                                        <div class="price-row">
+                                            <span class="price-item">$45</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="card-bottom">
+                                <input type="checkbox" class="checkbox">
+                                <span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+                                <svg class="instant-reservation">
+                                    <use xlink:href="img/sprite/sprite.svg#heart"></use>
+                                </svg>
+                            </label>
+                        </div>
+
+
+                    </li>
+                </ul>
+                <nav aria-label="navigation">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-prev page-arrow" href="#"></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link active" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                        <li class="page-item"><a class="page-next page-arrow" href="#"></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="map"></div>
+        </div>
+
+    </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="col">
+                <div class="footer-top__row">
+                    <a href="#" class="logo">Xx
+                        <span class="logo-span">.</span>
+                    </a>
+                    <p class="footer-text">
+                        Lorem ipsum dolor sit amet, <br> consectetur adipiscing
+                    </p>
+                </div>
+
+                <div class="markets">
+                    <a href="#">
+                        <img src="img/app-store.png" alt="app store" class="markets-img">
+                    </a>
+                    <a href="#">
+                        <img src="img/google-play.png" alt="google play" class="markets-img">
+                    </a>
+                </div>
+            </div>
+            <ul class="col">
+                <li class="footer-main">COMPANY</li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">About</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Partnership</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Careers</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Contacts</a>
+                </li>
+            </ul>
+            <ul class="col">
+                <li class="footer-main">host</li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Host your home</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Hosting rules</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Payment methods</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Hosting is safe</a>
+                </li>
+            </ul>
+            <ul class="col">
+                <li class="footer-main">SUPPORT</li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Knowledge base</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Report abuse</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-review">Trustpilot review score</a>
+                </li>
+            </ul>
+            <div class="markets-mob">
+                <a href="#">
+                    <img src="img/app-store.png" alt="app store" class="markets-img">
+                </a>
+                <a href="#">
+                    <img src="img/google-play.png" alt="google play" class="markets-img">
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__row">
+                <div class="footer-bottom__first">
+                    <p class="footer-text">
+                        © 2020 Rentxx, Inc. All rights reserved
+                    </p>
+                    <ul class="footer-bottom__ul">
+                        <li class="footer-bottom__li">
+                            <a href="#" class="footer-link">Privacy</a>
+                        </li>
+                        <li class="footer-bottom__li">
+                            <a href="#" class="footer-link"> Terms </a>
+                        </li>
+                        <li class="footer-bottom__li">
+                            <a href="#" class="footer-link">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__cards">
+                    <a href="#" class="footer__card"><img src="img/visa.png" alt="visa" class="footer-card__logo"></a>
+                    <a href="#" class="footer__card"><img src="img/mastercard.png" alt="mastercard" class="footer-card__logo"></a>
+                    <a href="#" class="footer__card"><img src="img/paypal.png" alt="paypal" class="footer-card__logo"></a>
+                </div>
+                <div class="footer__row">
+                    <a href="#" class="footer__select">$ USD
+                        <svg class="footer__select-arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__select">ru
+                        <svg class="footer__select-arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</footer>
+    <div>
+    <div class="popups popup__lang-curr">
+        <div class="popup">
+            <div class="popup__head">
+                <h2 class="popup__head-title">Язык и Валюта</h2>
+                <button type="button" class="close"></button>
+            </div>
+            <div class="popup-content">
+                <div class="popup__section">
+                    <h4 class="popup__title">Валюта</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">EUR</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox" checked>
+                            <span class="check"></span>
+                            <span class="check-text">USD</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">AZN</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">UAH</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">RUB</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">BEL</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">GEO</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="curr" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">EAD</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Язык</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Английский</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Французский</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Немецкий</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Японский</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__bottom">
+                    <a href="#" class="btn btn-small">SAVE CHANGES
+                        <svg class="arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="popups popup__additional-filters">
+        <div class="popup positionTop">
+            <div class="popup__head">
+                <h2 class="popup__head-title">Дополнительные фильтры</h2>
+                <button type="button" class="close"></button>
+            </div>
+            <form class="popup-content">
+                <div class="popup__section">
+                    <label class="label-checkbox">
+                        <input type="checkbox" class="checkbox">
+                        <span class="check"></span>
+                        <span class="check-text">Возможность отмены</span>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" class="checkbox" checked>
+                        <span class="check"></span>
+                        <span class="check-text">Опытный хозяин
+                   <span class="check-span"> Останавливайтесь у самых гостеприимных хозяев <a href="#" class="c-blue">Подробнее</a></span>
+
+                </span>
+                    </label>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Удобства</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Кухня</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Шампунь</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Отопление</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Кондиционер</span>
+                        </label>
+                    </div>
+                    <a href="#" class="link-item">Все удобства
+                        <svg class="arrow c-blue">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Дополнительные удобства</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Бесплатная <br>парковка</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox" checked>
+                            <span class="check"></span>
+                            <span class="check-text">Спортзал</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Джакузи</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="checkbox" class="checkbox" checked>
+                            <span class="check"></span>
+                            <span class="check-text">Бассейн</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Цена</h4>
+                    <div class="popup__row">
+                        <div class="popup__price" >
+                            <p>От</p>
+                            <input type="number" class="popup__input">
+                        </div>
+                        <div class="popup__price">
+                            <p>До</p>
+                            <input type="number" class="popup__input">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="popup__section">
+                    <h4 class="popup__title">Язык хозяина</h4>
+                    <div class="popup__row">
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Английский</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Французский</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Немецкий</span>
+                        </label>
+                        <label class="label-checkbox">
+                            <input type="radio" name="lang" class="checkbox">
+                            <span class="check"></span>
+                            <span class="check-text">Японский</span>
+                        </label>
+                    </div>
+                    <a href="#" class="link-item">все языки
+                        <svg class="arrow c-blue">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="popup__bottom popup__bottom__between">
+                    <button type="reset" class="link-item">очистить <span class="close"></span></button>
+                    <button type="submit" class="btn btn-small">показать варианты
+                        <svg class="arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyDuwDDiV2qbQiZExI0-ddTsMltbyYlS9IM"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+
+<script src="js/map.js"></script>
+
+<script src="js/common.js"></script>
+
+
+</body>
+</html>
