@@ -70,6 +70,15 @@ $(document).ready(function () {
     const html = templates.join(' ');
     document.querySelector('#catalog-list').innerHTML = html;
 
+
+    $(".card-item").mouseover(function () {
+        let index = $(this).index();
+        $(".my-div-icon").eq(index).addClass('active').siblings().removeClass('active');
+    });
+    $(".card-item").mouseout(function () {
+        $(".my-div-icon").removeClass('active');
+    });
+
 });
 
 // info
@@ -112,56 +121,20 @@ let card = [
     }
 ]
 
-// coordinates of city centers
-let centerMaps = [
-    {
-        latX: 40.374631,
-        latY: 49.856293,
-    }
-]
-let map, latLng, url, name, mark, marker, thisCenter, popupContent, price
-function initMap() {
-    // popupContent = '<div class="map-content"><p></p></div></div>';
-    thisCenterX = centerMaps[0].latX;
-    thisCenterY = centerMaps[0].latY;
-    let centerLatLng = new google.maps.LatLng(thisCenterX, thisCenterY);
-    let mapOptions = {
-        center: centerLatLng,
-        zoom: 15,
-        scrollwheel: false,
-        panControl: false,
-        zoomControl: true,
-        mapTypeControl: false,
-        scaleControl: false,
-        streetViewControl: false,
-        overviewMapControl: false,
-        rotateControl: false,
-    };
+let map = L.map('map', {
+    zoom: 14,
+    center: [40.386287,49.862855],
+    doubleClickZoom: false,
+    scrollWheelZoom: false,
+}).locate({setView: true});
 
-    map = new google.maps.Map(document.getElementById("map"), mapOptions);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
-    for (let i = 0; i < card.length; i++){
-        latLng = new google.maps.LatLng(card[i].lat, card[i].lng);
-        name = card[i].name;
-        url = card[i].url;
-        number = card[i].number;
-        price = card[i].price;
-        addMarker(latLng, name, url, number, price);
-
-    }
+for (let i = 0; i < card.length; i++) {
+    let marker = L.marker([card[i].lat, card[i].lng],{icon:myIcon = L.divIcon({
+            className: 'my-div-icon',
+            html: '<div class="map-pin"><span class="map-price">'+ card[i].price +'</span></div>'
+        })
+    }).addTo(map);
 }
-
-google.maps.event.addDomListener(window, "load", initMap);
-function addMarker(latLng, name, url) {
-    marker = new google.maps.Marker({
-        position: latLng,
-        map: map,
-        title: price,
-        icon: {
-            url: url,
-            scaledSize: new google.maps.Size(32, 32),
-        },
-    });
-}
-
-

@@ -96,7 +96,7 @@ input, textarea
   font-size: 15px
   line-height: 36px
   letter-spacing: 0.02em
-  color: #124570
+  color: $color3
   border: 2px solid #EEF3F9
   border-radius: 4px
   box-sizing: border-box
@@ -109,7 +109,7 @@ input.input-date.active
 input.input-visitor, input.input-date
   padding-right: 85px
 input.input-city:focus
-  border-color: #124570
+  border-color: $color3
 input.input-count
   width: 36px
   line-height: 38px
@@ -144,10 +144,23 @@ strong
   padding: 0 20px
   margin: 0 auto
 
+.select
+  position: absolute
+  left: 0
+  top: 100%
 .header
   position: relative
   width: 100%
   z-index: 8
+  &-main
+    //background: #F0F8FF
+    background: #EEF3F9
+    border-bottom: 2px solid #DCE7F1
+    .link
+      color: $color2
+    .header__selects-arrow
+      fill: $color2
+      stroke: $color2
   &-row
     display: flex
     align-items: center
@@ -168,8 +181,8 @@ strong
     &-item
       margin-left: 30px
     &-arrow
-      fill: #FFFFFF
-      stroke: #fff
+      fill: $color1
+      stroke: $color1
       width: 9px
       height: 9px
       margin-left: 6px
@@ -179,7 +192,8 @@ strong
   width: 100%
   top: 0
   z-index: 9
-  background: #F0F8FF
+  //background: #F0F8FF
+  background: #EEF3F9
   .container
     max-width: 100%
     padding: 0 30px
@@ -213,7 +227,7 @@ strong
   line-height: 22px
   margin-top: 30px
   letter-spacing: 0.02em
-  color: #124570
+  color: $color3
   padding: 0
   .close
     position: relative
@@ -278,7 +292,7 @@ strong
   color: #FF3535
   display: flex
   &-span
-    color: #292C31
+    color: $color2
 
 .in-catalog
   padding: 21px 48px 18px
@@ -337,7 +351,7 @@ strong
       transform: translate(-50%, -50%)
       width: 12px
       height: 2px
-      background: #124570
+      background: $color3
   &-plus:after
     content: ''
     position: absolute
@@ -346,7 +360,7 @@ strong
     transform: translate(-50%, -50%)
     width: 2px
     height: 12px
-    background: #124570
+    background: $color3
 
 
 .name
@@ -374,7 +388,12 @@ strong
   position: absolute
   right: 0
   top: 0
-
+  .arrow-down
+    margin: 0
+    fill: #124570
+    stroke: #124570
+    width: 20px
+    height: 20px
 .search
   background: #FCFDFF
   box-shadow: 0 0 65px rgba(95, 123, 148, 0.28)
@@ -382,7 +401,6 @@ strong
   padding: 25px
   display: flex
   justify-content: center
-  flex-wrap: wrap
   transition: all 0.4s
   &:hover
     box-shadow: 0 0 65px rgba(95, 123, 148, 0.58)
@@ -396,7 +414,7 @@ strong
 .btn
   display: flex
   align-items: center
-  line-height: 68px
+  line-height: 70px
   justify-content: center
   background: #FF3535
   border-radius: 4px
@@ -409,6 +427,7 @@ strong
   letter-spacing: 0.02em
   color: $color1
   transition: all 0.4s
+  padding: 0
   &:hover
     background: #FF4A4A
     box-shadow: 0px 4px 25px rgba(255, 74, 74, 0.3)
@@ -430,15 +449,22 @@ strong
     &:hover
       background: #EEF3F9
     .arrow-down
-      fill: #124570
-      stroke: #124570
-.btn-small
+      fill: $color3
+      stroke: $color3
+
+.btn-small, .btn-submit
   line-height: 55px
   font-family: "Gilroy-SemiBold", sans-serif
   font-weight: 600
+
+.btn-submit
+  max-width: 100%
+  text-transform: uppercase
+
 .btn-filter-all
   .arrow
     display: none
+
 .btn-light
   background: #EEF3F9
   border-radius: 4px
@@ -450,15 +476,15 @@ strong
   font-size: 15px
   letter-spacing: 0.02em
   text-transform: uppercase
-  color: #124570
+  color: $color3
   display: flex
   justify-content: center
   align-items: center
   width: fit-content
   transition: all 0.4s
   .arrow
-    fill: #124570
-    stroke: #124570
+    fill: $color3
+    stroke: $color3
   &:hover
     background: #DEECFF
 
@@ -485,6 +511,8 @@ strong
   justify-content: center
   align-items: center
   margin-left: 30px
+  &:hover
+    background-color: #DEECFF
 .btn-prev
   background-image: url("../img/arrow-right.svg")
   transform: scale(-1,1)
@@ -532,12 +560,12 @@ strong
 .checkbox
   display: none
   &:checked ~ .instant-reservation
-    fill: #124570
+    fill: $color3
   &:checked ~ .check
     background: #EEF3F9 url("../img/check.svg") no-repeat center / 37%
   &:checked ~ .check-reservation
-    background: #124570
-    color: #FFFFFF
+    background: $color3
+    color: $color1
 .footer
   background: #F0F8FF
   padding: 59px 0 0
@@ -560,7 +588,7 @@ strong
     line-height: 1
     letter-spacing: 0.02em
     text-transform: uppercase
-    color: #124570
+    color: $color3
     margin-bottom: 17px
   &-link
     font-size: 14px
@@ -569,9 +597,9 @@ strong
     color: #6E89A0
     transition: all 0.4s
     &:hover, &:focus, &:active
-      color: #124570
+      color: $color3
   &-review
-    color: #124570
+    color: $color3
     font-family: "Gilroy-SemiBold", sans-serif
     font-style: normal
     font-weight: 600
@@ -596,7 +624,7 @@ strong
       font-family: "Gilroy-Light", sans-serif
       color: rgba(110, 137, 160, 0.6)
       &:hover
-        color: #124570
+        color: $color3
 
     &__first
       width: 35.5%
@@ -621,7 +649,7 @@ strong
     font-size: 13px
     letter-spacing: 0.02em
     text-transform: uppercase
-    color: #124570
+    color: $color3
     margin-right: 56px
     line-height: 34px
     height: fit-content
@@ -630,8 +658,8 @@ strong
     &:hover
       text-decoration: underline
     &-arrow
-      fill: #124570
-      stroke: #124570
+      fill: $color3
+      stroke: $color3
       width: 10px
       height: 10px
       margin-left: 6px
@@ -718,7 +746,7 @@ strong
     transform: translate(-50%, -50%) rotate(45deg)
     height: 2px
     width: 22px
-    background: #124570
+    background: $color3
   &:after
     height: 22px
     width: 2px
@@ -823,9 +851,11 @@ input.popup__input
 .label-checkbox
   margin-bottom: 20px
   display: flex
+  &:hover .check
+    background-color: #DEECFF
 
 .check
-  background: #EEF3F9
+  background-color: #EEF3F9
   border-radius: 4px
   width: 40px
   height: 40px
@@ -860,13 +890,13 @@ input.popup__input
   font-weight: bold
   font-size: 16px
   letter-spacing: 0.02em
-  color: #124570
+  color: $color3
   border-radius: 3px
   text-align: center
   &:hover
     background: #EEF3F9
   &.active
-    background: #124570
+    background: $color3
     color: $color1
 
 .page-arrow
@@ -875,7 +905,8 @@ input.popup__input
   border-radius: 4px
   display: block
   margin: 0 10px
-
+  &:hover
+    background-color: #DEECFF
 .page-prev
   background: #EEF3F9 url("../img/arrow-right.svg") no-repeat center / 15%
   transform: scale(-1,1)
@@ -889,7 +920,7 @@ input.popup__input
   font-weight: bold
   font-size: 46px
   line-height: 60px
-  color: #292C31
+  color: $color2
 
 .title
   font-family: "Merriweather-Bold", sans-serif
@@ -897,7 +928,7 @@ input.popup__input
   font-weight: bold
   font-size: 36px
   line-height: 60px
-  color: #292C31
+  color: $color2
 
 .text-17
   font-family: "Gilroy-SemiBold", sans-serif
@@ -905,7 +936,7 @@ input.popup__input
   font-weight: 600
   font-size: 17px
   text-transform: uppercase
-  color: #124570
+  color: $color3
 
 .text-16
   font-family: "Gilroy-Bold", sans-serif
@@ -914,7 +945,7 @@ input.popup__input
   font-size: 16px
   line-height: 22px
   letter-spacing: 0.02em
-  color: #124570
+  color: $color3
 
 .text-15
   font-size: 15px
@@ -935,13 +966,19 @@ input.popup__input
   background-color: #FCE3E3
 .bg-light-yellow
   background-color: rgba(221, 159, 0, 0.08)
+
 .d-md-block
   display: none
 .d-block
   display: block
 
+.mt-22
+  margin-top: 22px
+
 @import "../components/pages/main/style"
 @import "../components/pages/catalog/style"
+@import "../components/pages/payment/style"
+@import "../components/pages/signin/style"
 
 .c-blue
   color: $color3
@@ -980,7 +1017,7 @@ input.popup__input
   font-weight: bold
   font-size: 14px
   letter-spacing: 0.02em
-  color: #124570
+  color: $color3
 .date-picker-wrapper .month-wrapper table
   width: 100%
 .date-picker-wrapper table .caption .next, .date-picker-wrapper table .caption .prev
@@ -1030,7 +1067,7 @@ input.popup__input
     justify-content: center
     border-radius: 3px
 .date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected
-  background: #124570!important
+  background: $color3!important
   border-radius: 3px!important
 .date-picker-wrapper .month-wrapper table .day.lastMonth, .date-picker-wrapper .month-wrapper table .day.nextMonth
   display: flex
@@ -1042,5 +1079,6 @@ input.popup__input
   border-radius: 0
 .dp-clearfix
   display: none
+
 @import "media"
 // Всегда в конце

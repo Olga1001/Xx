@@ -26,8 +26,6 @@ $(document).ready(function () {
         $(this).closest(".select").find(".select-drop").slideUp(300);
     });
 
-
-
     //choice number of guests
     $(".input-visitor, .icon").click( function (e) {
         e.stopPropagation();
@@ -71,7 +69,6 @@ $(document).ready(function () {
             $(".input-visitor").val(a+b + " человек");
         } else {
             $(".input-visitor").val(a+b + " человекa");
-
         }
     });
 
@@ -184,8 +181,15 @@ $(document).ready(function () {
         $(".catalog-list").find("li").removeClass('card-item').addClass('card');
     }
 
+    //tabs
+    $(".tab").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".forms-content form").eq(index).addClass('active').siblings().removeClass('active');
+    });
 
-
+    //masks
+    $(".phone").mask("+7(999)999-99-99");
 });
 
 $(document).ready(function () {
@@ -200,8 +204,19 @@ $(document).ready(function () {
             }
         }
     };
+    let options2 = {
+        url: "city.json",
+        getValue: "codecountry",
+        list: {
+            maxNumberOfElements: 4,
+            match: {
+                enabled: true
+            }
+        }
+    };
 
     $("#js-easyAutocomplete").easyAutocomplete(options);
+    $("#js-easyAutocomplete2").easyAutocomplete(options2);
 
 });
 //daterangepicker
