@@ -58,6 +58,8 @@
         </div>
     </div>
 </header>
+
+
     <div id="wrapper-content">
         <div class="signin-signup">
             <div class="forms">
@@ -66,74 +68,96 @@
                     <li class="tab ">регистрация</li>
                 </ul>
                 <div class="forms-content">
-                    <form class="signin active">
-                        <div class="field mt-22">
-                            <p class="name">Страна</p>
-                            <input type="text" required>
-                            <div class="icon">
-                                <svg class="arrow arrow-down">
-                                    <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                </svg>
+                    <form class="signin " >
+                        <fieldset>
+                            <div class="field mt-22">
+                                <p class="name">Страна</p>
+                                <input type="text" id="js-easyAutocomplete2" required>
+                                <div class="icon">
+                                    <svg class="arrow arrow-down">
+                                        <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </div>
                             </div>
-                            <ul class="dropdown">
-                                <li class="dropdown-item">(+380) Украина</li>
-                                <li class="dropdown-item">(+380) Украина</li>
-                            </ul>
-                        </div>
-                        <div class="field mt-22">
-                            <p class="name">Номер</p>
-                            <input type="text" required>
-                        </div>
-                        <div class="field mt-22">
-                            <p class="name">Пароль</p>
-                            <input type="password" required>
-                        </div>
-                        <button type="submit" class="btn btn-submit mt-22">ВОЙТИ</button>
-                        <p class="forms-gray">или войти с другого акканута</p>
-                        <div class="socials">
-                            <a href="#" class="social">
-                                <img src="img/google.png" alt="google" class="social-icon">
-                            </a>
-                            <a href="#" class="social">
-                                <img src="img/facebook.svg" alt="facebook" class="social-icon">
-                            </a>
-                            <a href="#" class="social">
-                                <img src="img/mail.svg" alt="mail" class="social-icon-mail">
-                            </a>
-                        </div>
+                            <div class="field mt-22">
+                                <p class="name">Номер</p>
+                                <input type="text" required>
+                            </div>
+                            <div class="field mt-22">
+                                <p class="name">Пароль</p>
+                                <input type="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-submit mt-22">ВОЙТИ</button>
+                            <p class="forms-gray">или войти с другого акканута</p>
+                            <div class="socials">
+                                <a href="#" class="social">
+                                    <img src="img/google.png" alt="google" class="social-icon">
+                                </a>
+                                <a href="#" class="social">
+                                    <img src="img/facebook.svg" alt="facebook" class="social-icon">
+                                </a>
+                                <a href="#" class="social">
+                                    <img src="img/mail.svg" alt="mail" class="social-icon-mail">
+                                </a>
+                            </div>
+                        </fieldset>
                     </form>
                     <form class="signup ">
-                        <div class="field mt-22">
-                            <p class="name">Имя</p>
-                            <input type="text" value="Алексей" required>
-                        </div>
-                        <div class="field mt-22">
-                            <p class="name">Фамилия</p>
-                            <input type="text" value="Петров" required>
-                        </div>
-                        <div class="field mt-22">
-                            <p class="name">Дата рождения</p>
-                            <input type="text" value="29/12/1989">
-                        </div>
-                        <div class="field mt-22">
-                            <p class="name">E-Mail</p>
-                            <input type="text" value="aleksey.petrov@xx.com" required>
-                        </div>
-                        <div class="field mt-22">
-                            <p class="name">Пароль</p>
-                            <input type="password" value="password" required>
-                        </div>
-                        <div class="field mt-22">
-                            <p class="name">Пароль еще раз</p>
-                            <input type="password" value="password" required>
-                        </div>
-                        <p class="forms-text mt-22">
-                            Регистрируясь на нашем сервисе вы соглашаетесь с правилами пользования <a href="#" class="forms-link"> Читать условия</a>
-                        </p>
-                        <button type="submit" class="btn btn-submit mt-22">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
-                    </form>
-                    <form class="signup-step">
+                        <fieldset>
+                            <div class="field mt-22">
+                                <p class="name" >Имя</p>
+                                <input type="text" value="Алексей" name="firstname" pattern="[A-Za-zА-Яа-яЁё]" required>
+                            </div>
+                            <div class="field mt-22">
+                                <p class="name" >Фамилия</p>
+                                <input type="text" value="Петров" name="lastname"  pattern="[A-Za-zА-Яа-яЁё]" required>
+                            </div>
+                            <div class="field mt-22">
+                                <p class="name">Дата рождения</p>
+                                <input type="text" value=""  data-inputmask-alias="dd/mm/yyyy" data-inputmask="'yearrange': { 'minyear': '1917', 'maxyear': '2016' }"  data-val="true" data-val-required="Required">
+                            </div>
+                            <div class="field mt-22">
+                                <p class="name">E-Mail</p>
+                                <input type="email" name="email" value="aleksey.petrov@xx.com" required>
+                            </div>
+                            <div class="field mt-22">
+                                <p class="name">Пароль</p>
+                                <input type="password" name="password" value="password" required>
+                            </div>
+                            <div class="field mt-22">
+                                <p class="name">Пароль еще раз</p>
+                                <input type="password" name="confirm_password" value="password" required>
+                            </div>
+                            <p class="forms-text mt-22">
+                                Регистрируясь на нашем сервисе вы соглашаетесь с правилами пользования <a href="#" class="forms-link"> Читать условия</a>
+                            </p>
+                            <button type="submit" class="btn btn-submit mt-22">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
+                        </fieldset>
 
+                    </form>
+                    <form class="signup-step active">
+                        <fieldset>
+                            <p class="forms-text mt-22">
+                                На ваш номер было отправлено сообщение с кодом регистрации. <a href="#" class="forms-link"> Отправить еще раз </a>
+                            </p>
+                            <div class="field mt-22">
+                                <p class="name">Код</p>
+                                <input type="text" required>
+                            </div>
+                            <button type="submit" class="btn btn-submit mt-22">ПРОДОЛЖИТЬ</button>
+                            <p class="forms-gray">или войти с другого акканута</p>
+                            <div class="socials">
+                                <a href="#" class="social">
+                                    <img src="img/google.png" alt="google" class="social-icon">
+                                </a>
+                                <a href="#" class="social">
+                                    <img src="img/facebook.svg" alt="facebook" class="social-icon">
+                                </a>
+                                <a href="#" class="social">
+                                    <img src="img/mail.svg" alt="mail" class="social-icon-mail">
+                                </a>
+                            </div>
+                        </fieldset>
 
                     </form>
                 </div>
@@ -491,6 +515,7 @@
 
 <script src="js/moment.min.js"></script>
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery.inputmask.bundle.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/jquery.daterangepicker.min.js"></script>
 <script src="js/common.js"></script>

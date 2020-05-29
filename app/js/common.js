@@ -188,11 +188,79 @@ $(document).ready(function () {
         $(".forms-content form").eq(index).addClass('active').siblings().removeClass('active');
     });
 
-    //masks
-    $(".phone").mask("+7(999)999-99-99");
+    //after selected country - focus on next input
+    $(".easy-autocomplete-container").click( function () {
+        console.log("22");
+        $("input.phone").focus();
+    });
+
+
+
+    // $.getJSON( "city.json", function() {
+    //   mask.getValue
+    // });
+
+
 });
 
+
 $(document).ready(function () {
+    //Mask
+    $(":input[data-inputmask-alias]").inputmask();
+});
+$(document).ready(function () {
+
+    validate
+    $(".signup, .signin").validate({
+        tooltip: {
+            hide: false
+        },
+        rules: {
+            firstname: "required",
+            lastname: "required",
+            password: {
+                required: true,
+                minlength: 6
+            },
+            confirm_password: {
+                required: true,
+                minlength: 6,
+                equalTo: ".password"
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            // phone: {
+            //     required: true,
+            // }
+        },
+
+        messages: {
+            firstname: "Пожалуйста, введите ваше имя",
+            lastname: "Пожалуйста, введите свою фамилию",
+            password: {
+                required: "Пожалуйста, введите пароль.",
+                minlength: "Длина пароля должна быть не менее 6 символов."
+            },
+            confirm_password: {
+                required: "Пожалуйста, введите пароль.",
+                minlength: "Длина пароля должна быть не менее 6 символов.",
+                equalTo: "Пожалуйста, введите тот же пароль, что и выше."
+            },
+            email: "Пожалуйста, введите действительный адрес электронной почты",
+        }
+    });
+
+});
+$(document).ready(function () {
+    //masks
+    // $(".phone").inputMasks(optionsMask);
+    // let optionsMask = {
+    //     url: "city.json",
+    //     getValue: "mask"
+    // };
+
     //Autocomplete
     let options = {
         url: "city.json",
@@ -217,6 +285,9 @@ $(document).ready(function () {
 
     $("#js-easyAutocomplete").easyAutocomplete(options);
     $("#js-easyAutocomplete2").easyAutocomplete(options2);
+
+
+
 
 });
 //daterangepicker

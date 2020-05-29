@@ -76,6 +76,18 @@ img
   display: block
   object-fit: contain
 
+label.error
+  position: absolute
+  right: 20px
+  top: 50%
+  transform: translateY(-50%)
+  width: 24px
+  height: 24px
+  background: url("../img/error.svg") no-repeat center / contain
+  display: none
+  color: transparent
+
+
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
   -webkit-appearance: none
   margin: 0
@@ -89,7 +101,7 @@ input, textarea
   resize: none
   -webkit-appearance: none
   padding: 24px 25px 6px
-  background: transparent
+  background-color: transparent
   font-family: "Gilroy-Bold", sans-serif
   font-style: normal
   font-weight: bold
@@ -102,10 +114,20 @@ input, textarea
   box-sizing: border-box
   width: 100%
   transition: all 0.4s
+  appearance: none
+//input:-webkit-autofill, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill , select:-webkit-autofill:focus
+//  -webkit-text-fill-color: $color3
+//  color: $color3
+//  -webkit-box-shadow: 0 0 0px 1000px #fff inset
+//  transition: all 0.4s ease-in-out 0s
+//
+//input:-webkit-autofill:hover, textarea:-webkit-autofill:hover
+//  -webkit-box-shadow: 0 0 0 1000px #E5EDF5 inset
+
 input
   height: 70px
 input.input-date.active
-  background: #EEF3F9
+  background-color: #EEF3F9
 input.input-visitor, input.input-date
   padding-right: 85px
 input.input-city:focus
@@ -118,7 +140,7 @@ input.input-count
   border: none
   height: auto
   &:hover
-    background: transparent
+    background-color: transparent
 button
   cursor: pointer
   outline: none
@@ -310,11 +332,12 @@ strong
   display: flex
   &:hover
     .icon
-      background: #E5EDF5
+      background-color: #E5EDF5
     input
-      background: #EEF3F9
+      background-color: #EEF3F9
     input.input-count
-      background: transparent
+      background-color: transparent
+
 
 .dropdown
   position: absolute
@@ -530,7 +553,7 @@ strong
   background: #fff
   border-radius: 0 0 4px 4px
   overflow: hidden
-  z-index: 5
+  z-index: 6
   li:last-child .eac-item
     border: none
 
@@ -1004,7 +1027,7 @@ input.popup__input
   border-radius: 4px
   border: none
   max-width: 285px
-  &:hover ~ .reservation__content .search .field .input-date
+  &:hover ~ .reservation__content .search .field input.input-date
     background: #EEF3F9
 .date-picker-wrapper .month-wrapper
   padding: 0

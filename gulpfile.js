@@ -68,6 +68,7 @@ gulp.task('libs-js', function(){
   return gulp.src([
       'app/libs/EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js',
       'app/libs/slick-1.8.1/slick/slick.min.js',
+      'app/libs/jquery-validation-1.19.2/dist/jquery.validate.min.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
