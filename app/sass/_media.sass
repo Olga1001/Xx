@@ -7,7 +7,10 @@
 @media only screen and (min-width : 768px)
   .d-md-block
     display: block
-
+  .tooltip
+    left: auto
+    right: -20px
+    transform: none
 @media only screen and (max-width : 1179px)
   .search-result__item
     background-color: transparent
@@ -72,7 +75,8 @@
     width: 40px
   .connect-item__head
     padding: 10px 15px
-
+  .payment__info-item
+    margin-right: 30px
 @media only screen and (max-width : 991px)
   .row-slider .slide
     opacity: 1
@@ -99,6 +103,47 @@
     display: none
   .catalog-content
     max-width: 100%
+  .remember__item
+    width: 100%
+  .payment__right
+    position: absolute
+    z-index: 9
+    right: 0
+    top: 56px
+    padding-top: 0
+    min-height: fit-content
+    display: none
+  .payment__form
+    position: initial
+    border: none
+    box-shadow: 0px 4px 25px rgba(198, 198, 198, 0.25)
+  .tooltip
+    transform: translateX(-50%)
+  .payment__form-content
+    padding: 0 20px 15px
+  .payment__content
+    width: 100%
+    padding-right: 0
+    max-width: 100%
+  .payment__head-row
+    justify-content: space-between
+    .logo
+      line-height: 54px
+  .step
+    display: none
+  .step-mob
+    display: block
+  .counts
+    padding: 0 20px
+  .payment__form-content img
+    width: 60px
+  .payment__form .btn
+    display: flex
+  .payment__form-text
+    margin-top: 5px
+  .payment__form-blue
+    text-decoration: underline
+
 @media only screen and (max-width : 767px)
   .header__selects
     margin-right: 0
@@ -222,7 +267,7 @@
   .footer-top__row
     display: flex
     align-items: center
-  .footer
+  .footer-top
     padding: 52px 0 0 0
   .footer .logo
     margin: 0 55px 0 0
@@ -303,12 +348,88 @@
     opacity: 1
   .popup__head-title
     font-size: 18px
+  .payment__info-item
+    width: calc(50% - 15px)
+  .more
+    background: #EEF3F9
+    justify-content: center
+    line-height: 50px
+    text-transform: uppercase
+    font-family: "Gilroy-SemiBold", sans-serif
+    font-weight: 600
+    font-size: 15px
+    .more-arrow
+      stroke: #124570
+  .btn-red
+    width: 100%
+  .payment__content .btn
+    margin-top: 30px
+  .payment__content .title
+    font-size: 20px
+    font-family: "Merriweather-Bold", sans-serif
+    font-weight: bold
+  .payment
+    padding: 25px 0 50px
+  .payment__block
+    padding-bottom: 0
+  .text-17
+    font-size: 17px
+  .payment__info-item
+    margin-top: 20px
+    margin-bottom: 5px
+    padding: 22px 25px
+    min-height: 150px
+  .list-item
+    padding-left: 37px
+  .list-item:before
+    left: 0
+  .remember
+    padding-top: 40px
+  .remember__row
+    padding: 30px 0 10px
+  .payment__content .like-box
+    display: flex
+  .payment__content .payment__block .like-box
+    display: none
+  .like-box
+    margin: 40px 0 0 0
+    padding: 30px 22px
+    align-items: flex-start
+  .like-box__icon
+    margin-top: 5px
+  .like-box__text, .like-box__title
+    line-height: 26px
+  .like-box__text
+    margin-top: 7px
+  .footer-small
+    display: none
+  .coming
+    display: block
+    padding-bottom: 40px
+    .field
+      max-width: 100%
+      margin-bottom: 30px
+  .section-chat__tooltip
+    display: none
+  .chat
+    display: block
+  .chat-avatar
+    margin-right: 20px
+  .chat__head .section-chat__tooltip
+    display: block
+    margin: 0
+  .write-message
+    min-height: 120px
+  .section-chat
+    padding-top: 40px
+
 @media only screen and (max-width : 575px)
   .popup__bottom__between
     flex-direction: column-reverse
     align-items: flex-end
   .signin-signup
     padding: 50px 0 60px
+
 @media only screen and (max-width : 480px)
   .forms
     max-width: 100%

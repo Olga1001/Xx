@@ -19,6 +19,8 @@
                 <a href="#" class="logo">Xx
                     <span class="logo-span">.</span>
                 </a>
+                <div class="step-mob">шаг 3 из 3</div>
+                <button class="payment__close close"></button>
                 <ul class="step">
                     <li class="step-item">
                         <a href="#" class="step-link active">
@@ -29,7 +31,7 @@
                         </a>
                     </li>
                     <li class="step-item">
-                        <a href="#" class="step-link">
+                        <a href="#" class="step-link active">
                             2. Кто приезжает?
                             <svg class="step-arrow">
                                 <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
@@ -40,19 +42,127 @@
                         <a href="#" class="step-link">
                             3. Подтвердите и оплатите
                         </a>
-
                     </li>
                 </ul>
             </div>
-
         </div>
-
     </header>
     <div id="wrapper-content">
         <div class="container">
             <div class="payment">
-                <h2 class="title">Правила дома</h2>
-                <div class="payment__block">
+                <div class="payment__content">
+                    <h2 class="title">Подтвердите и оплатите</h2>
+                    <div class="payment__block">
+                        <div class="like-box">
+                            <img src="img/medical.svg" alt="medical" class="like-box__icon">
+                            <div class="like-box__col">
+                                <p class="like-box__title">Людям нравится это объявление</p>
+                                <p class="like-box__text">На прошлой неделе этими датами интересовались другие люди (5)</p>
+                            </div>
+                        </div>
+
+                        <form class="form-confirm">
+                            <div class="field">
+                                <p class="name">Оплатить с помощью</p>
+                                <input type="text" value="Кредитная или дебетовая карта" class="input-visitor" readonly required>
+                                <div class="icon">
+                                    <svg class="arrow arrow-down">
+                                        <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="payment-row">
+                                <div class="field mt-22">
+                                    <p class="name">Имя</p>
+                                    <input type="text" required>
+                                </div>
+                                <div class="field mt-22">
+                                    <p class="name">Фамилия</p>
+                                    <input type="text" required>
+                                </div>
+                            </div>
+
+                            <div class="payment-card">
+                                <div class="field mt-22">
+                                    <p class="name">Номер карты</p>
+                                    <input type="text" value="1014 - 2082 - 6969 - 6969" class="input-visitor" readonly required>
+                                </div>
+                                <div class="payment-row">
+                                    <div class="field">
+                                        <p class="name">Срок действия</p>
+                                        <input type="text" value="10 / 25" required>
+                                    </div>
+                                    <div class="field">
+                                        <p class="name">CVV</p>
+                                        <input type="text" value="769" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-row">
+                                <div class="field mt-22">
+                                    <p class="name">Адрес</p>
+                                    <input type="text"  required>
+                                </div>
+                                <div class="field mt-22">
+                                    <p class="name">Квартира</p>
+                                    <input type="text" required>
+                                </div>
+                                <div class="field mt-22">
+                                    <p class="name">Город</p>
+                                    <input type="text" required>
+                                </div>
+                                <div class="field mt-22">
+                                    <p class="name">Штат</p>
+                                    <input type="text" required>
+                                </div>
+                                <div class="field mt-22">
+                                    <p class="name">Индекс</p>
+                                    <input type="text" required>
+                                </div>
+                                <div class="field mt-22">
+                                    <p class="name">Страна/регион</p>
+                                    <input type="text" required>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="coming">
+
+                            <label class="label-checkbox ">
+                                <input type="checkbox" class="checkbox">
+                                <span class="check"></span>
+                                <span class="check-text">Путешествуете по делам?</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="section-chat">
+                        <p class="text-17">Познакомьтесь с хозяином</p>
+                        <p class="section-chat__tooltip">Расскажите хозяину Sinan о себе и о том, почему вы приезжаете.</p>
+                        <div class="chat">
+                            <div class="chat__head">
+                                <img src="img/avatar.jpg" alt="avatar" class="chat-avatar">
+                                <p class="section-chat__tooltip">Расскажите хозяину Sinan о себе и о том, почему вы приезжаете.</p>
+                            </div>
+                            <div class="chat__block">
+                                <div class="window">
+                                    <div class="window-message">
+                                        <p>Thank you for booking your stay at Caspian Sea View Apartment!</p>
+                                        <p>Hope to see you soon, and let me know if you have any questions?</p>
+                                        <p>Regards,</p>
+                                        <p>Sinan</p>
+                                    </div>
+                                </div>
+                                <textarea rows="2" class="write-message">Hello Sinan! Can’t wait to spend 10 nights in your home.</textarea>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="btn btn-red">ПРОДОЛЖИТЬ
+                            <svg class="arrow">
+                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </a>
                     <div class="like-box">
                         <img src="img/medical.svg" alt="medical" class="like-box__icon">
                         <div class="like-box__col">
@@ -60,41 +170,88 @@
                             <p class="like-box__text">На прошлой неделе этими датами интересовались другие люди (5)</p>
                         </div>
                     </div>
-                    <p class="text-17">10 ночей в г. Баку</p>
-                    <div class="payment__info">
-                        <div class="payment__info-item">
-                            <p class="text-16">10 сентября</p>
-                            <p class="payment__info-text">Прибытие в четверг после 15:00</p>
+                </div>
+                <div class="payment__right">
+                    <div class="payment__form">
+                        <div class="payment__form-head">
+                            <img src="img/foto.jpg" alt="img" class="payment__form-img">
+                            <div class="payment__form-col">
+                                <p class="text-16">Просторная и современная квартира в центре города</p>
+                                <div class="star">
+                                    <img src="img/star-2.svg" alt="star" class="img-star">
+                                    <span class="text-15 c-gray-medium">5,0 (98 отзывов)</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="payment__info-item">
-                            <p class="text-16">20 сентября</p>
-                            <p class="payment__info-text">Выезд в воскресенье
-                                в 11:00</p>
+                        <div class="payment__form-content">
+                            <ul class="payment__form-ul">
+                                <li class="payment__form-li">
+                                    <img src="img/calendar.svg" alt="calendar" class="icon-calendar">
+                                    <div class="payment__form-info">
+                                        <p class="payment__form-gray">Прибытие и выезд</p>
+                                        <p class="payment__form-blue">10 сентября - 20 сентября</p>
+                                    </div>
+                                </li>
+                                <li class="payment__form-li">
+                                    <img src="img/person.svg" alt="person" class="icon-person">
+                                    <div class="payment__form-info">
+                                        <p class="payment__form-gray">Гостей</p>
+                                        <p class="payment__form-blue">3 человека</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="payment__form-ul">
+                                <li class="payment__form-li">
+                                    <div class="counts">
+                                        <p class="counts-item">878₽ x 10 ночей</p>
+                                        <p class="counts-item">$450</p>
+                                    </div>
+                                </li>
+                                <li class="payment__form-li">
+                                    <div class="counts">
+                                        <p class="counts-item">Скидка 10% (за неделю)
+                                            <span class="question">
+                                                <span class="tooltip">При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат и любовь.</span>
+                                            </span>
+                                        </p>
+                                        <p class="counts-item">-$45</p>
+                                    </div>
+                                </li>
+                                <li class="payment__form-li">
+                                    <div class="counts">
+                                        <p class="counts-item">Плата за уборку
+                                            <span class="question">
+                                                <span class="tooltip">При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат и любовь.</span>
+                                            </span>
+                                        </p>
+                                        <p class="counts-item">$15</p>
+                                    </div>
+                                </li>
+                                <li class="payment__form-li">
+                                    <div class="counts">
+                                        <p class="counts-total">Итого</p>
+                                        <p class="counts-total"> $420</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-red">ЗАБРОНИРОВАТЬ</a>
+                            <div class="payment__form-bottom">
+                                <p class="text-16">Бесплатная отмена до 27 августа</p>
+                                <p class="payment__form-text">
+                                    При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат. <a href="#" class="more-link"> Подробнее</a>
+                                </p>
+                            </div>
+
                         </div>
                     </div>
-                    <ul class="list">
-                        <li class="list-item">Самостоятельное прибытие (Мини-сейф)</li>
-                    </ul>
                 </div>
-                <div class="remember">
-                    <p class="text-17">что нужно помнить</p>
-                    <div class="remember__row">
-                        <div class="remember__item">
-                            <svg class="remember__icon">
-                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="payment__form">
 
             </div>
+
         </div>
 
     </div>
-    @import "footer.html"
-    @import "popups.html"
+    @import "footer-small.html"
 </div>
 
 

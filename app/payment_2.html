@@ -19,7 +19,7 @@
                 <a href="#" class="logo">Xx
                     <span class="logo-span">.</span>
                 </a>
-                <div class="step-mob">шаг 3 из 3</div>
+                <div class="step-mob">шаг 2 из 3</div>
                 <button class="payment__close close"></button>
                 <ul class="step">
                     <li class="step-item">
@@ -51,7 +51,7 @@
         <div class="container">
             <div class="payment">
                 <div class="payment__content">
-                    <h2 class="title">Подтвердите и оплатите</h2>
+                    <h2 class="title">Кто приезжает?</h2>
                     <div class="payment__block">
                         <div class="like-box">
                             <img src="img/medical.svg" alt="medical" class="like-box__icon">
@@ -61,73 +61,34 @@
                             </div>
                         </div>
 
-                        <form class="form-confirm">
-                            <div class="field">
-                                <p class="name">Оплатить с помощью</p>
-                                <input type="text" value="Кредитная или дебетовая карта" class="input-visitor" readonly required>
-                                <div class="icon">
-                                    <svg class="arrow arrow-down">
-                                        <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="payment-row">
-                                <div class="field mt-22">
-                                    <p class="name">Имя</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Фамилия</p>
-                                    <input type="text" required>
-                                </div>
-                            </div>
-
-                            <div class="payment-card">
-                                <div class="field mt-22">
-                                    <p class="name">Номер карты</p>
-                                    <input type="text" value="1014 - 2082 - 6969 - 6969" class="input-visitor" readonly required>
-                                </div>
-                                <div class="payment-row">
-                                    <div class="field">
-                                        <p class="name">Срок действия</p>
-                                        <input type="text" value="10 / 25" required>
-                                    </div>
-                                    <div class="field">
-                                        <p class="name">CVV</p>
-                                        <input type="text" value="769" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="payment-row">
-                                <div class="field mt-22">
-                                    <p class="name">Адрес</p>
-                                    <input type="text"  required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Квартира</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Город</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Штат</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Индекс</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Страна/регион</p>
-                                    <input type="text" required>
-                                </div>
-                            </div>
-                        </form>
-
                         <div class="coming">
-
+                            <div class="field">
+                                <p class="name">Гостей</p>
+                                <input type="text" value="3 человек" class="input-visitor" readonly required>
+                                <div class="icon"><img src="img/person.svg" alt="person" class="img-person"></div>
+                                <ul class="dropdown">
+                                    <li class="dropdown-item">
+                                        <p class="c-gray">Взрослые
+                                            <span class="text-12">от 13 лет</span>
+                                        </p>
+                                        <div class="count ">
+                                            <button type="button" class="count-btn count-minus "></button>
+                                            <input type="text" class="input-count count__adults" value="1" readonly>
+                                            <button type="button" class="count-btn count-plus"></button>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <p class="c-gray">Дети
+                                            <span class="text-12">до 12 лет</span>
+                                        </p>
+                                        <div class="count">
+                                            <button type="button" class="count-btn count-minus "></button>
+                                            <input type="text" class="input-count count__children" value="0" readonly>
+                                            <button type="button" class="count-btn count-plus"></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                             <label class="label-checkbox ">
                                 <input type="checkbox" class="checkbox">
                                 <span class="check"></span>

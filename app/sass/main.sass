@@ -13,24 +13,40 @@
     box-sizing: border-box
 
 *::-webkit-input-placeholder
-  font-size: 14px
-  line-height: 16px
-  color: #A9A9A9
+  font-family: "Gilroy-Regular", sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 15px
+  line-height: 22px
+  letter-spacing: 0.02em
+  color: #898989
 
 *:-moz-placeholder
-  font-size: 14px
-  line-height: 16px
-  color: #A9A9A9
+  font-family: "Gilroy-Regular", sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 15px
+  line-height: 22px
+  letter-spacing: 0.02em
+  color: #898989
 
 *::-moz-placeholder
-  font-size: 14px
-  line-height: 16px
-  color: #A9A9A9
+  font-family: "Gilroy-Regular", sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 15px
+  line-height: 22px
+  letter-spacing: 0.02em
+  color: #898989
 
 *:-ms-input-placeholder
-  font-size: 14px
-  line-height: 16px
-  color: #A9A9A9
+  font-family: "Gilroy-Regular", sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 15px
+  line-height: 22px
+  letter-spacing: 0.02em
+  color: #898989
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   margin: 0
@@ -115,6 +131,8 @@ input, textarea
   width: 100%
   transition: all 0.4s
   appearance: none
+  outline: none
+
 //input:-webkit-autofill, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill , select:-webkit-autofill:focus
 //  -webkit-text-fill-color: $color3
 //  color: $color3
@@ -313,6 +331,7 @@ strong
   letter-spacing: 0.02em
   color: #FF3535
   display: flex
+  align-items: center
   &-span
     color: $color2
 
@@ -474,6 +493,11 @@ strong
     .arrow-down
       fill: $color3
       stroke: $color3
+  &-red
+    line-height: 55px
+    max-width: 100%
+    width: fit-content
+    padding: 0 35px
 
 .btn-small, .btn-submit
   line-height: 55px
@@ -591,7 +615,6 @@ strong
     color: $color1
 .footer
   background: #F0F8FF
-  padding: 59px 0 0
   &-text
     color: #6E89A0
     line-height: 20px
@@ -602,7 +625,8 @@ strong
     display: flex
     flex-wrap: wrap
     width: 100%
-    padding-bottom: 50px
+    padding: 59px 0 50px
+    border-bottom: 1px solid #EAF2FA
   &-main
     font-family: "Gilroy-SemiBold", sans-serif
     font-style: normal
@@ -633,7 +657,6 @@ strong
     display: block
   &-bottom
     padding: 30px 0
-    border-top: 1px solid #EAF2FA
     &__row
       display: flex
       flex-wrap: wrap
@@ -648,10 +671,8 @@ strong
       color: rgba(110, 137, 160, 0.6)
       &:hover
         color: $color3
-
     &__first
       width: 35.5%
-
   &__card
     margin-right: 60px
     &:last-child
@@ -686,6 +707,101 @@ strong
       width: 10px
       height: 10px
       margin-left: 6px
+  &-small
+    padding: 24px 0
+    .logo
+      margin: 0
+    .footer__row
+      width: auto
+
+.like-box
+  display: flex
+  align-items: center
+  background: #EEF3F9
+  border-radius: 4px
+  padding: 30px
+  margin: 0 0 47px
+  &__icon
+    width: 19px
+    height: 19px
+    flex-shrink: 0
+    margin-right: 20px
+  &__title
+    font-family: "Gilroy-SemiBold", sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    letter-spacing: 0.02em
+    color: #124570
+  &__text
+    font-size: 16px
+    line-height: 22px
+    letter-spacing: 0.02em
+    color: #50575E
+
+.list
+  padding: 32px 0
+.list-item
+  position: relative
+  padding-left: 68px
+  font-size: 16px
+  line-height: 22px
+  letter-spacing: 0.02em
+  color: #50575E
+  &:before
+    content: ''
+    position: absolute
+    left: 30px
+    top: 50%
+    transform: translateY(-50%)
+    background: #124570
+    border-radius: 1px
+    width: 8px
+    height: 8px
+
+.more
+  display: flex
+  align-items: center
+  font-size: 16px
+  line-height: 28px
+  letter-spacing: 0.02em
+  color: #124570
+  cursor: pointer
+  border-radius: 4px
+  &:hover
+    text-decoration: underline
+  &.active
+    .more-arrow
+      transform: rotate(0)
+  &-arrow
+    fill: #124570
+    width: 10px
+    height: 10px
+    margin-left: 10px
+    transform: rotate(-90deg)
+
+.read-more
+  padding: 10px 0
+  display: none
+.read-text
+  font-size: 16px
+  line-height: 26px
+  letter-spacing: 0.02em
+  color: #50575E
+
+.more-link
+  letter-spacing: 0.02em
+  font-size: 16px
+  line-height: 26px
+  color: #124570
+  &:hover
+    text-decoration: underline
+
+.icon-calendar
+  height: 22px
+.icon-person
+  height: 24px
 
 .col
   width: 21.5%
@@ -785,6 +901,8 @@ strong
   width: 100%
   transition: all 0.4s
   margin: 0
+  .label-checkbox
+    margin-bottom: 20px
   &-content
     overflow-y: auto
     height: calc(100% - 62px)
@@ -872,7 +990,6 @@ input.popup__input
   appearance: none
 
 .label-checkbox
-  margin-bottom: 20px
   display: flex
   &:hover .check
     background-color: #DEECFF
@@ -937,6 +1054,40 @@ input.popup__input
 .page-next
   background: #EEF3F9 url("../img/arrow-right.svg") no-repeat center / 15%
 
+.question
+  width: 18px
+  height: 18px
+  position: relative
+  background: url("../img/question.svg") no-repeat center / contain
+  display: block
+  float: right
+  margin: 0 10px
+  &:hover
+    .tooltip
+      opacity: 1
+      pointer-events: auto
+
+.tooltip
+  position: absolute
+  left: 50%
+  transform: translateX(-30%)
+  bottom: calc(100% + 15px)
+  line-height: 16px
+  letter-spacing: 0.02em
+  color: #50575E
+  width: max-content
+  display: block
+  max-width: 310px
+  background: $color1
+  z-index: 5
+  border: 1px solid #124570
+  box-sizing: border-box
+  border-radius: 4px
+  padding: 12px
+  transition: all 0.4s
+  opacity: 0
+  pointer-events: none
+
 .title-main
   font-family: "Merriweather-Bold", sans-serif
   font-style: normal
@@ -998,6 +1149,7 @@ input.popup__input
 .mt-22
   margin-top: 22px
 
+
 @import "../components/pages/main/style"
 @import "../components/pages/catalog/style"
 @import "../components/pages/payment/style"
@@ -1014,6 +1166,8 @@ input.popup__input
   color: $color1
 .c-gray
   color: #414950
+.c-gray-medium
+  color: #50575E
 .c-gray-light
   color: #D0D0D0
 

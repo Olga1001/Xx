@@ -1,9 +1,15 @@
-.payment
-  &__head
-    border-bottom: 2px solid #EAF2FA
-    &-row
-      display: flex
-      align-items: center
+
+.step-mob
+  display: none
+  font-family: "Gilroy-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 13px
+  line-height: 1
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  color: #292C31
+
 .step
   display: flex
   flex-wrap: wrap
@@ -27,15 +33,48 @@
     transform: rotate(-90deg)
     margin: 0 35px
 
+.payment__close.close
+  display: none
+  width: 54px
+  height: 54px
+  &:before
+    width: 35px
+    height: 3.5px
+    border-radius: 4px
+  &:after
+    border-radius: 4px
+    height: 35px
+    width: 3.5px
+
 .payment
-  padding: 47px 0
-  width: 100%
-  max-width: 655px
-  flex-shrink: 0
-  &__form
+  padding: 47px 0 90px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  &__right
     width: 100%
     max-width: 400px
     flex-shrink: 0
+    min-height: 100%
+    padding-top: 82px
+  &__content
+    width: calc(100% - 403px)
+    max-width: 675px
+    padding-right: 20px
+    .btn
+      margin-top: 43px
+    .title
+      text-align: left
+    .like-box
+      display: none
+    .payment__block
+      .like-box
+        display: flex
+  &__head
+    border-bottom: 2px solid #EAF2FA
+    &-row
+      display: flex
+      align-items: center
   &__info
     display: flex
     flex-wrap: wrap
@@ -47,6 +86,8 @@
       padding: 22px 30px
       max-width: 240px
       margin-right: 60px
+      &:last-child
+        margin-right: 0
     &-text
       font-size: 16px
       line-height: 22px
@@ -56,54 +97,211 @@
   &__block
     border-bottom: 2px solid #EAF2FA
     padding-bottom: 13px
+    padding-top: 25px
+  &__form
+    background: #FCFDFF
+    border: 2px solid #EEF3F9
+    box-sizing: border-box
+    border-radius: 4px
+    position: sticky
+    top: 20px
+    height: fit-content
+    .btn
+      display: none
+      width: 100%
+      margin: 30px 0 10px
+      line-height: 50px
+    &-text
+      font-size: 16px
+      line-height: 26px
+      letter-spacing: 0.02em
+      color: #50575E
+    &-head
+      display: flex
+      padding: 30px 30px 25px
+      background: #EEF3F9
+    &-img
+      width: 100px
+      height: 70px
+      border-radius: 4px
+      object-fit: cover
+      margin-right: 15px
+      flex-shrink: 0
+    &-col
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &-content
+      padding: 0 38px 20px
+      img
+        width: 53px
+    &-li
+      display: flex
+      align-items: center
+      border-bottom: 2px solid #EAF2FA
+      padding: 13px 0
+    &-gray
+      font-size: 14px
+      line-height: 22px
+      letter-spacing: 0.02em
+      color: #898989
+    &-blue
+      font-family: "Gilroy-Bold", sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 15px
+      line-height: 22px
+      letter-spacing: 0.02em
+      color: #124570
+    &-bottom
+      padding: 20px 0
 
-.like-box
+.counts
   display: flex
-  align-items: center
-  background: #EEF3F9
-  border-radius: 4px
-  padding: 30px
-  margin: 22px 0 47px
-  &__icon
-    width: 19px
-    height: 19px
-    flex-shrink: 0
-    margin-right: 20px
-  &__title
-    font-family: "Gilroy-SemiBold", sans-serif
-    font-style: normal
-    font-weight: 600
-    font-size: 16px
-    line-height: 22px
-    letter-spacing: 0.02em
-    color: #124570
-  &__text
-    font-size: 16px
+  justify-content: space-between
+  width: 100%
+  &-item
+    font-size: 15px
     line-height: 22px
     letter-spacing: 0.02em
     color: #50575E
+  &-total
+    font-family: "Gilroy-SemiBold", sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 15px
+    line-height: 22px
+    letter-spacing: 0.02em
+    text-transform: uppercase
+    color: #124570
 
-.list
-  padding: 32px 0
-.list-item
-  position: relative
-  padding-left: 68px
-  font-size: 16px
-  line-height: 22px
-  letter-spacing: 0.02em
-  color: #50575E
-  &:before
-    content: ''
-    position: absolute
-    left: 30px
-    top: 50%
-    transform: translateY(-50%)
-    background: #124570
-    border-radius: 1px
-    width: 8px
-    height: 8px
 
 .remember
-  &__icon
+  padding: 50px 0 0
+  &__row
+    display: flex
+    flex-wrap: wrap
+    padding: 40px 0 10px
+  &__item
+    width: 50%
+    margin-bottom: 20px
+    display: flex
+    align-items: center
     &.disabled
+      .remember__icon
+        background: #F4F4F4
+        &:before
+          content: ''
+      svg
+        fill: #969595
 
+  &__icon
+    background: #EEF3F9
+    border-radius: 4px
+    fill: #124570
+    position: relative
+    width: 50px
+    height: 50px
+    margin-right: 20px
+    flex-shrink: 0
+    &:before
+      content: none
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%) rotate(45deg)
+      background-color: #969595
+      height: 1px
+      width: 45px
+    svg
+      margin: 0 auto
+      display: block
+      width: 47%
+      height: 100%
+
+
+.coming
+  display: flex
+  align-items: center
+  padding-bottom: 35px
+  .field
+    max-width: 250px
+    width: 100%
+    margin-right: 40px
+
+.section-chat
+  padding-top: 50px
+  &__tooltip
+    font-size: 15px
+    line-height: 22px
+    letter-spacing: 0.02em
+    color: #50575E
+    margin-top: 8px
+
+.chat
+  display: flex
+  margin-top: 25px
+  &__head
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    .section-chat__tooltip
+      display: none
+  &-avatar
+    width: 45px
+    height: 45px
+    border-radius: 4px
+    object-fit: cover
+    margin-right: 10px
+    flex-shrink: 0
+  &__block
+    width: 100%
+
+.window
+  &-message
+    background: #EEF3F9
+    padding: 15px 20px
+    border-radius: 4px
+    margin-bottom: 14px
+    p
+      font-size: 16px
+      line-height: 26px
+      letter-spacing: 0.02em
+      color: #50575E
+
+.write-message
+  padding: 15px 20px
+  line-height: 22px
+  height: auto
+  min-height: 75px
+  color: #898989
+  font-family: "Gilroy-Regular", sans-serif
+  font-weight: normal
+  font-style: normal
+  &:hover
+    background-color: #EEF3F9
+  &:focus
+    border-color: #124570
+
+.form-confirm
+.payment-row
+  display: flex
+  flex-wrap: wrap
+  .field
+    width: calc(50% - 10px)
+    margin-right: 20px
+    &:nth-child(2n+2)
+      margin-right: 0
+.payment-card .field input
+  border-radius: 4px 4px 0 0
+.payment-card .payment-row .field
+  width: 50%
+  margin: 0
+  input
+    border-top: none
+  &:first-child input
+    border-right: 1px solid #EEF3F9
+    border-radius: 0 0 0 4px
+  &:last-child input
+    border-left: 1px solid #EEF3F9
+    border-radius: 0 0 4px 0

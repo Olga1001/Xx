@@ -195,11 +195,51 @@ $(document).ready(function () {
     });
 
 
+    $(".more").click(function () {
+        $(this).toggleClass('active');
+        $(".read-more").slideToggle(300);
+        $(".remember__item").show();
+    });
+
+    //show only 6 apartments in the desktop and 3 in the mobile. The rest are hidden
+    function hideRemember() {
+        let lengthRemember = $(".remember__item").length;
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            if (lengthRemember > 3) {
+                $(".remember__item").hide();
+                for (let i = 1; i <= 3; i++) {
+                    $(".remember__item:nth-child(" + i + ")").show();
+                }
+            }
+        } else {
+            if (lengthRemember > 6) {
+                $(".remember__item").hide();
+                for (let i = 1; i <= 6; i++) {
+                    $(".remember__item:nth-child(" + i + ")").show();
+                }
+            }
+        }
+    }
+
+    hideRemember();
 
     // $.getJSON( "city.json", function() {
     //   mask.getValue
     // });
-
+    if (window.matchMedia("(max-width: 991px)").matches) {
+        $(".continue").click(function (e) {
+            e.preventDefault()
+            $(".step-mob").hide();
+            $(".payment__right").show();
+            $(".payment__close").show();
+        });
+        $(".payment__close").click(function (e) {
+            e.preventDefault()
+            $(".step-mob").show();
+            $(".payment__right").hide();
+            $(".payment__close").hide();
+        });
+    }
 
 });
 

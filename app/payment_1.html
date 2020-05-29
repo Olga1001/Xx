@@ -19,7 +19,7 @@
                 <a href="#" class="logo">Xx
                     <span class="logo-span">.</span>
                 </a>
-                <div class="step-mob">шаг 3 из 3</div>
+                <div class="step-mob">шаг 1 из 3</div>
                 <button class="payment__close close"></button>
                 <ul class="step">
                     <li class="step-item">
@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="step-item">
-                        <a href="#" class="step-link active">
+                        <a href="#" class="step-link">
                             2. Кто приезжает?
                             <svg class="step-arrow">
                                 <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
@@ -51,7 +51,7 @@
         <div class="container">
             <div class="payment">
                 <div class="payment__content">
-                    <h2 class="title">Подтвердите и оплатите</h2>
+                    <h2 class="title">Правила дома</h2>
                     <div class="payment__block">
                         <div class="like-box">
                             <img src="img/medical.svg" alt="medical" class="like-box__icon">
@@ -60,105 +60,89 @@
                                 <p class="like-box__text">На прошлой неделе этими датами интересовались другие люди (5)</p>
                             </div>
                         </div>
-
-                        <form class="form-confirm">
-                            <div class="field">
-                                <p class="name">Оплатить с помощью</p>
-                                <input type="text" value="Кредитная или дебетовая карта" class="input-visitor" readonly required>
-                                <div class="icon">
-                                    <svg class="arrow arrow-down">
-                                        <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        <p class="text-17">10 ночей в г. Баку</p>
+                        <div class="payment__info">
+                            <div class="payment__info-item">
+                                <p class="text-16">10 сентября</p>
+                                <p class="payment__info-text">Прибытие в четверг после 15:00</p>
+                            </div>
+                            <div class="payment__info-item">
+                                <p class="text-16">20 сентября</p>
+                                <p class="payment__info-text">Выезд в воскресенье
+                                    в 11:00</p>
+                            </div>
+                        </div>
+                        <ul class="list">
+                            <li class="list-item">Самостоятельное прибытие (Мини-сейф)</li>
+                        </ul>
+                    </div>
+                    <div class="remember">
+                        <p class="text-17">что нужно помнить</p>
+                        <div class="remember__row">
+                            <div class="remember__item">
+                                <div class="remember__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite/sprite.svg#pet"></use>
                                     </svg>
                                 </div>
-                            </div>
-                            <div class="payment-row">
-                                <div class="field mt-22">
-                                    <p class="name">Имя</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Фамилия</p>
-                                    <input type="text" required>
-                                </div>
-                            </div>
 
-                            <div class="payment-card">
-                                <div class="field mt-22">
-                                    <p class="name">Номер карты</p>
-                                    <input type="text" value="1014 - 2082 - 6969 - 6969" class="input-visitor" readonly required>
-                                </div>
-                                <div class="payment-row">
-                                    <div class="field">
-                                        <p class="name">Срок действия</p>
-                                        <input type="text" value="10 / 25" required>
-                                    </div>
-                                    <div class="field">
-                                        <p class="name">CVV</p>
-                                        <input type="text" value="769" required>
-                                    </div>
-                                </div>
+                                <p class="remember__text">Можно с животными</p>
                             </div>
-                            <div class="payment-row">
-                                <div class="field mt-22">
-                                    <p class="name">Адрес</p>
-                                    <input type="text"  required>
+                            <div class="remember__item">
+                                <div class="remember__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite/sprite.svg#pet"></use>
+                                    </svg>
                                 </div>
-                                <div class="field mt-22">
-                                    <p class="name">Квартира</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Город</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Штат</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Индекс</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Страна/регион</p>
-                                    <input type="text" required>
-                                </div>
+                                <p class="remember__text">Можно с животными</p>
                             </div>
-                        </form>
+                            <div class="remember__item disabled">
+                                <div class="remember__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite/sprite.svg#party"></use>
+                                    </svg>
+                                </div>
+                                <p class="remember__text">Без вечеринок</p>
+                            </div>
+                            <div class="remember__item disabled">
+                                <div class="remember__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite/sprite.svg#party"></use>
+                                    </svg>
+                                </div>
+                                <p class="remember__text">Без вечеринок и мероприятий</p>
+                            </div>
+                            <div class="remember__item disabled">
+                                <div class="remember__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite/sprite.svg#smoking"></use>
+                                    </svg>
+                                </div>
 
-                        <div class="coming">
-
-                            <label class="label-checkbox ">
-                                <input type="checkbox" class="checkbox">
-                                <span class="check"></span>
-                                <span class="check-text">Путешествуете по делам?</span>
-                            </label>
+                                <p class="remember__text">Нельзя курить</p>
+                            </div>
+                            <div class="remember__item disabled">
+                                <div class="remember__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite/sprite.svg#smoking"></use>
+                                    </svg>
+                                </div>
+                                <p class="remember__text">Нельзя курить</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="section-chat">
-                        <p class="text-17">Познакомьтесь с хозяином</p>
-                        <p class="section-chat__tooltip">Расскажите хозяину Sinan о себе и о том, почему вы приезжаете.</p>
-                        <div class="chat">
-                            <div class="chat__head">
-                                <img src="img/avatar.jpg" alt="avatar" class="chat-avatar">
-                                <p class="section-chat__tooltip">Расскажите хозяину Sinan о себе и о том, почему вы приезжаете.</p>
-                            </div>
-                            <div class="chat__block">
-                                <div class="window">
-                                    <div class="window-message">
-                                        <p>Thank you for booking your stay at Caspian Sea View Apartment!</p>
-                                        <p>Hope to see you soon, and let me know if you have any questions?</p>
-                                        <p>Regards,</p>
-                                        <p>Sinan</p>
-                                    </div>
-                                </div>
-                                <textarea rows="2" class="write-message">Hello Sinan! Can’t wait to spend 10 nights in your home.</textarea>
-                            </div>
-                        </div>
-
+                    <div class="more">
+                        Подробнее
+                        <svg class="more-arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
                     </div>
-
-                    <a href="#" class="btn btn-red">ПРОДОЛЖИТЬ
+                    <div class="read-more">
+                        <p class="read-text">
+                            При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат. Тес При отмене не позднее чем за 14 дней до прибытия вы полный возврат. возыа При отмене не позднее чем за 14 дней до прибытия вы получите возврат.
+                        </p>
+                    </div>
+                    <a href="#" class="btn btn-red continue">СОГЛАСИТЬСЯ И ПРОДОЛЖИТЬ
                             <svg class="arrow">
                                 <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
                             </svg>
