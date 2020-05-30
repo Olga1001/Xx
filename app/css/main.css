@@ -2470,7 +2470,10 @@ input.popup__input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content; }
     .chat__head .section-chat__tooltip {
       display: none; }
   .chat-avatar {
@@ -2548,7 +2551,7 @@ input.popup__input {
     margin-top: 9px; }
 
 .signin-signup {
-  min-height: calc(100vh - 382px - 75px);
+  min-height: calc(100vh - 382px - 77px);
   padding: 40px 0 90px;
   background: #EEF3F9; }
 
@@ -3287,4 +3290,3 @@ input.popup__input {
   .socials {
     -ms-flex-pack: distribute;
         justify-content: space-around; } }
-
