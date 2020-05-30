@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
     //create a card template in Catalog list
     function createPage(page){
         return `  

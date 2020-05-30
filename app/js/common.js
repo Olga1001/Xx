@@ -135,6 +135,7 @@ $(document).ready(function () {
     $(".close, .popups").click(function (e) {
         e.preventDefault();
         $(".popups").removeClass('active');
+        $(".error").removeClass('active');
     });
 
     //show only 6 apartments in the desktop and 3 in the mobile. The rest are hidden
@@ -188,20 +189,13 @@ $(document).ready(function () {
         $(".forms-content form").eq(index).addClass('active').siblings().removeClass('active');
     });
 
-    //after selected country - focus on next input
-    $(".easy-autocomplete-container").click( function () {
-        console.log("22");
-        $("input.phone").focus();
-    });
-
-
     $(".more").click(function () {
         $(this).toggleClass('active');
         $(".read-more").slideToggle(300);
         $(".remember__item").show();
     });
 
-    //show only 6 apartments in the desktop and 3 in the mobile. The rest are hidden
+    //show only 6 remember in the desktop and 3 in the mobile. The rest are hidden
     function hideRemember() {
         let lengthRemember = $(".remember__item").length;
         if (window.matchMedia("(max-width: 767px)").matches) {
@@ -223,9 +217,7 @@ $(document).ready(function () {
 
     hideRemember();
 
-    // $.getJSON( "city.json", function() {
-    //   mask.getValue
-    // });
+    //show/hide intelligence in mobile (page payment_1)
     if (window.matchMedia("(max-width: 991px)").matches) {
         $(".continue").click(function (e) {
             e.preventDefault()
@@ -241,95 +233,80 @@ $(document).ready(function () {
         });
     }
 
-});
+    //select
+    $(".input-select, .icon").click(function (e) {
+        e.preventDefault();
+        $(this).closest(".field").find(".select").slideToggle(300);
+    });
+    $(".select-option").click(function (e) {
+        let option = $(this).text();
+        e.preventDefault();
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).closest(".select").slideUp(300);
+        $(this).closest(".field").find(".input-select").val(option);
+    });
 
+});
 
 $(document).ready(function () {
     //Mask
-    $(":input[data-inputmask-alias]").inputmask();
+    $("input.inputmask-date").inputmask({
+        alias: "dd/mm/yyyy",
+        val: true
+        }
+    );
+    $("input[name='username']").inputmask({
+        regex: String.raw`\D*`,
+    });
+
+    $("input[name='email']").inputmask({
+        mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+        greedy: false,
+        onBeforePaste: function (pastedValue, opts) {
+            pastedValue = pastedValue.toLowerCase();
+            return pastedValue.replace("mailto:", "");
+        },
+        definitions: {
+            '*': {
+                validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+                casing: "lower"
+            }
+        }
+    });
+    $("input.input-card").inputmask("9999 - 9999 - 9999 - 9999");
+    $("input.input-validity").inputmask("99 / 99");
+    $("input.input-cvv").inputmask("999");
+
 });
+
+
 $(document).ready(function () {
 
-    validate
-    $(".signup, .signin").validate({
-        tooltip: {
-            hide: false
-        },
-        rules: {
-            firstname: "required",
-            lastname: "required",
-            password: {
-                required: true,
-                minlength: 6
-            },
-            confirm_password: {
-                required: true,
-                minlength: 6,
-                equalTo: ".password"
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            // phone: {
-            //     required: true,
-            // }
-        },
+    //valid form
+    $("#sign-in").click(function () {
+        $(".btn-error").hide();
+        let input = $(this).closest("form").find("input");
+        $(this).closest("form").find("input:invalid").closest(".field").find(".btn-error").show();
+        if(input.val() == '' ){
+            $(".error").addClass('active');
+        }
+    });
 
-        messages: {
-            firstname: "Пожалуйста, введите ваше имя",
-            lastname: "Пожалуйста, введите свою фамилию",
-            password: {
-                required: "Пожалуйста, введите пароль.",
-                minlength: "Длина пароля должна быть не менее 6 символов."
-            },
-            confirm_password: {
-                required: "Пожалуйста, введите пароль.",
-                minlength: "Длина пароля должна быть не менее 6 символов.",
-                equalTo: "Пожалуйста, введите тот же пароль, что и выше."
-            },
-            email: "Пожалуйста, введите действительный адрес электронной почты",
+    $("#sign-up").click(function (e) {
+        $(".btn-error").hide();
+        e.preventDefault();
+        let input = $(this).closest("form").find("input");
+        $(this).closest("form").find("input:invalid").closest(".field").find(".btn-error").show();
+        if(input.val() != '' ){
+            $(this).closest(".signup").removeClass('active');
+            $(".signup-step").addClass('active');
+        } else {
+            $(".error").addClass('active');
         }
     });
 
 });
-$(document).ready(function () {
-    //masks
-    // $(".phone").inputMasks(optionsMask);
-    // let optionsMask = {
-    //     url: "city.json",
-    //     getValue: "mask"
-    // };
 
-    //Autocomplete
-    let options = {
-        url: "city.json",
-        getValue: "cityname",
-        list: {
-            maxNumberOfElements: 4,
-            match: {
-                enabled: true
-            }
-        }
-    };
-    let options2 = {
-        url: "city.json",
-        getValue: "codecountry",
-        list: {
-            maxNumberOfElements: 4,
-            match: {
-                enabled: true
-            }
-        }
-    };
-
-    $("#js-easyAutocomplete").easyAutocomplete(options);
-    $("#js-easyAutocomplete2").easyAutocomplete(options2);
-
-
-
-
-});
 //daterangepicker
 $(document).ready(function () {
 
@@ -352,3 +329,45 @@ $(document).ready(function () {
 });
 
 
+//Autocomplete
+$(document).ready(function () {
+
+    let options = {
+        url: "city.json",
+        getValue: "cityname",
+        list: {
+            maxNumberOfElements: 4,
+            match: {
+                enabled: true
+            }
+        }
+    };
+
+    $("#js-easyAutocomplete").easyAutocomplete(options); //page MAIN
+
+    let options2 = {
+        url: "city.json",
+        getValue: function(element) {
+            return element.codecountry;
+        },
+        list: {
+            maxNumberOfElements: 4,
+            onSelectItemEvent: function() {
+                let selectedItemValue = $("#input-country").getSelectedItemData().mask;
+                $("#input-phone").val(selectedItemValue).trigger("mask");
+            },
+
+        }
+    };
+
+    $("#input-country").easyAutocomplete(options2); //page SIGNIN
+});
+
+$(document).ready(function () {
+    //after selected country - focus on next input
+    $(".easy-autocomplete-container").click( function () {
+        console.log("22");
+        $("input#input-phone").focus();
+    });
+
+});

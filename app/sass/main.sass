@@ -92,7 +92,7 @@ img
   display: block
   object-fit: contain
 
-label.error
+.btn-error
   position: absolute
   right: 20px
   top: 50%
@@ -102,6 +102,7 @@ label.error
   background: url("../img/error.svg") no-repeat center / contain
   display: none
   color: transparent
+  pointer-events: none
 
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
@@ -188,6 +189,28 @@ strong
   position: absolute
   left: 0
   top: 100%
+  z-index: 7
+  width: 100%
+  box-shadow: 0px 4px 25px #D0D6E0
+  display: none
+  &-option
+    font-family: "Gilroy-Bold", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 13px
+    letter-spacing: 0.02em
+    text-transform: uppercase
+    color: #124570
+    line-height: 50px
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    padding: 0 25px
+    background: #FCFDFF
+    transition: all 0.3s
+    cursor: pointer
+    &:hover, &.active
+      background: #EEF4FB
 .header
   position: relative
   width: 100%
@@ -613,6 +636,9 @@ strong
   &:checked ~ .check-reservation
     background: $color3
     color: $color1
+  &:checked ~ .check-radio-text
+    color: #124570
+
 .footer
   background: #F0F8FF
   &-text
@@ -795,8 +821,15 @@ strong
   font-size: 16px
   line-height: 26px
   color: #124570
+  display: inline-flex
+  align-items: center
   &:hover
     text-decoration: underline
+  &-arrow
+    fill: #124570
+    width: 10px
+    height: 10px
+    transform: translateX(7px) rotate(-90deg)
 
 .icon-calendar
   height: 22px
@@ -855,6 +888,68 @@ strong
 //.overlay
 //  position: fixed
 //  left: 0
+.country-cod
+  position: absolute
+  left: 0
+  top: 0
+  padding: 24px 25px 6px
+  border: 2px solid transparent
+  font-family: "Gilroy-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 15px
+  line-height: 36px
+  letter-spacing: 0.02em
+  color: #124570
+.error
+  position: absolute
+  top: 155px
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 99
+  background: #FCFDFF
+  box-shadow: 0 0 65px rgba(95, 123, 148, 0.4)
+  border-radius: 5px
+  display: none
+  max-width: 660px
+  width: 100%
+  .c-blue
+    text-transform: uppercase
+  &.active
+    display: block
+  &__head
+    min-height: 54px
+    display: flex
+    align-items: center
+    position: relative
+    padding: 0 40px
+    border-bottom: 2px solid #EEF3F9
+  &-item
+    font-size: 14px
+    line-height: 22px
+    letter-spacing: 0.02em
+    color: #50575E
+    margin-bottom: 20px
+  &-list
+    padding: 20px 40px
+  &-link
+    color: #124570
+    text-decoration: underline
+  .close
+    width: 54px
+    height: 54px
+    top: 50%
+    transform: translateY(-50%)
+    right: 5px
+    &:before
+      width: 35px
+      height: 3.5px
+      border-radius: 4px
+    &:after
+      border-radius: 4px
+      height: 35px
+      width: 3.5px
+
 .popups
   position: fixed
   top: 0
@@ -1003,6 +1098,28 @@ input.popup__input
   margin-right: 15px
   flex-shrink: 0
 
+.label-radio
+  max-width: 450px
+  margin-top: 20px
+  .payment__form-text
+    margin-top: 8px
+    display: block
+
+.check-radio
+  width: 45px
+  height: 45px
+  border-radius: 50%
+
+.check-radio-text
+  font-family: "Gilroy-Bold", sans-serif
+  font-weight: bold
+  font-size: 16px
+  line-height: 22px
+  letter-spacing: 0.02em
+  color: #50575E
+  margin-top: 12px
+
+
 .check-text
   margin-top: 9px
   font-size: 15px
@@ -1133,6 +1250,10 @@ input.popup__input
   font-size: 12px
   letter-spacing: 0.02em
   color: #898989
+
+.weight-normal
+  font-weight: 400
+  font-family: "Gilroy-Regular", sans-serif
 
 .bg-light-blue
   background-color: #F0F8FF

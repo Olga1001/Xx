@@ -7,10 +7,12 @@
 @media only screen and (min-width : 768px)
   .d-md-block
     display: block
+@media only screen and (max-width : 1260px)
   .tooltip
     left: auto
     right: -20px
     transform: none
+
 @media only screen and (max-width : 1179px)
   .search-result__item
     background-color: transparent
@@ -422,7 +424,28 @@
     min-height: 120px
   .section-chat
     padding-top: 40px
-
+  .form-confirm
+    .field
+      margin: -2px 0 0 0
+      input
+        border-radius: 0
+      &.w-100
+        width: 100%
+        margin: -2px 0 0 0
+        input
+          border: 2px solid #EEF3F9!important
+  .payment-row .field
+    width: 50%
+    &:nth-child(odd)
+      input
+        border-right: 1px solid #EEF3F9
+    &:nth-child(even)
+      input
+        border-left: 1px solid #EEF3F9
+  .payment__radio
+    padding-bottom: 30px
+  .regulations
+    padding-bottom: 0
 @media only screen and (max-width : 575px)
   .popup__bottom__between
     flex-direction: column-reverse
