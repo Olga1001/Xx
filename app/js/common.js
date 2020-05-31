@@ -283,21 +283,24 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     //valid form
+
     $("#sign-in").click(function () {
         $(".btn-error").hide();
-        let input = $(this).closest("form").find("input");
-        $(this).closest("form").find("input:invalid").closest(".field").find(".btn-error").show();
-        if(input.val() == '' ){
+        let input = $(this).closest("form").find("input:invalid");
+        input.closest(".field").find(".btn-error").show();
+        if(input.val() == ''){
             $(".error").addClass('active');
         }
     });
 
     $("#sign-up").click(function (e) {
         $(".btn-error").hide();
+        let input = $(this).closest("form").find("input:invalid");
+        input.closest(".field").find(".btn-error").show();
+
         e.preventDefault();
-        let input = $(this).closest("form").find("input");
-        $(this).closest("form").find("input:invalid").closest(".field").find(".btn-error").show();
-        if(input.val() != '' ){
+
+        if(input.val() != ''){
             $(this).closest(".signup").removeClass('active');
             $(".signup-step").addClass('active');
         } else {
@@ -366,8 +369,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     //after selected country - focus on next input
     $(".easy-autocomplete-container").click( function () {
-        console.log("22");
         $("input#input-phone").focus();
     });
-
 });
