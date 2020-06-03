@@ -10,6 +10,7 @@
           integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
           crossorigin=""/>
     <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/daterangepicker.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -24,9 +25,38 @@
             </a>
              <div class="header-row">
                 <form class="search-result">
-                    <input class="search-result__item" value="Баку">
-                    <input class="search-result__item" value="10.10 - 20.10">
-                    <input class="search-result__item"value="3 человека">
+                    <div class="search-result__item">
+                        <input class="search-result__input search-result__city search-result__city-head" value="Баку" required>
+                    </div>
+                    <div class="search-result__item">
+                        <input class="search-result__input search-result__date" value="10.10 - 20.10" required>
+                    </div>
+                    <div class="search-result__item">
+                        <input type="text" value="1 человек" class="search-result__input input-visitor" readonly required>
+                        <ul class="dropdown">
+                            <li class="dropdown-item">
+                                <p class="c-gray">Взрослые
+                                    <span class="text-12">от 13 лет</span>
+                                </p>
+                                <div class="count ">
+                                    <button type="button" class="count-btn count-minus "></button>
+                                    <input type="text" class="input-count count__adults" value="1" readonly>
+                                    <button type="button" class="count-btn count-plus"></button>
+                                </div>
+                            </li>
+                            <li class="dropdown-item">
+                                <p class="c-gray">Дети
+                                    <span class="text-12">до 12 лет</span>
+                                </p>
+                                <div class="count">
+                                    <button type="button" class="count-btn count-minus "></button>
+                                    <input type="text" class="input-count count__children" value="0" readonly>
+                                    <button type="button" class="count-btn count-plus"></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                     <button type="submit" class="search-result__btn">
                         <svg class="search-result__icon">
                             <use xlink:href="img/sprite/sprite.svg#search"></use>
@@ -70,9 +100,39 @@
         <div class="catalog">
             <div class="catalog-content">
                 <form class="search-result">
-                    <input class="search-result__item" value="Баку">
-                    <input class="search-result__item" value="10.10 - 20.10">
-                    <input class="search-result__item"value="3 человека">
+                    <div class="search-result__item">
+                        <input class="search-result__input search-result__city search-result__city-body" value="Баку" required>
+                    </div>
+                   <div class="search-result__item">
+                       <input class="search-result__input search-result__date" value="10.10 - 20.10" required>
+                   </div>
+                   <div class="search-result__item">
+                       <input type="text" value="1 человек" class="search-result__input input-visitor" readonly required>
+                       <ul class="dropdown">
+                           <li class="dropdown-item">
+                               <p class="c-gray">Взрослые
+                                   <span class="text-12">от 13 лет</span>
+                               </p>
+                               <div class="count ">
+                                   <button type="button" class="count-btn count-minus "></button>
+                                   <input type="text" class="input-count count__adults" value="1" readonly>
+                                   <button type="button" class="count-btn count-plus"></button>
+                               </div>
+                           </li>
+                           <li class="dropdown-item">
+                               <p class="c-gray">Дети
+                                   <span class="text-12">до 12 лет</span>
+                               </p>
+                               <div class="count">
+                                   <button type="button" class="count-btn count-minus "></button>
+                                   <input type="text" class="input-count count__children" value="0" readonly>
+                                   <button type="button" class="count-btn count-plus"></button>
+                               </div>
+                           </li>
+                       </ul>
+                   </div>
+
+
                     <button type="submit" class="search-result__btn">
                         <svg class="search-result__icon">
                             <use xlink:href="img/sprite/sprite.svg#search"></use>
@@ -481,11 +541,13 @@
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
+<script src="js/moment.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
 
 <script src="js/map.js"></script>
 
+<script src="js/jquery.daterangepicker.min.js"></script>
 <script src="js/common.js"></script>
 
 

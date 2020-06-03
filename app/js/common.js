@@ -310,27 +310,38 @@ $(document).ready(function () {
 
 });
 
-//daterangepicker
-$(document).ready(function () {
+//daterangepicker (MAIN, CATALOG)
 
-    $(function() {
-        $('input[name="daterange"]').dateRangePicker({
-            opens: 'left',
-            autoUpdateInput: true,
-            startOfWeek: 'monday',
-            singleMonth: true,
-            showShortcuts: false,
-            // showTopbar: false,
-            autoApply: false,
-            locale: {
-                "format": "DD.MM.YYYY",
-            }
-        }, function(start, end, label) {
-            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
-        });
-    });
+
+let optionDate = {
+    opens: 'left',
+    autoUpdateInput: true,
+    startOfWeek: 'monday',
+    singleMonth: true,
+    showShortcuts: false,
+    // showTopbar: false,
+    autoApply: false,
+    format: "YYYY.MM.DD"
+}
+
+let optionDate2 = {
+    opens: 'left',
+    autoUpdateInput: true,
+    startOfWeek: 'monday',
+    singleMonth: true,
+    showShortcuts: false,
+    // showTopbar: false,
+    autoApply: false,
+    format: "DD.MM"
+}
+
+$(function() {
+    $('input[name="daterange"]').dateRangePicker(optionDate);
 });
 
+$(function() {
+    $('.search-result__date').dateRangePicker(optionDate2)
+});
 
 //Autocomplete
 $(document).ready(function () {
@@ -364,6 +375,26 @@ $(document).ready(function () {
     };
 
     $("#input-country").easyAutocomplete(options2); //page SIGNIN
+
+    let options3 = {
+        url: "city.json",
+        getValue: function(element) {
+            return element.cityname;
+        },
+        list: {
+            maxNumberOfElements: 4,
+            onSelectItemEvent: function() {
+                let selectedItemValue = $(".search-result__city-body").getSelectedItemData().city;
+                $(".search-result__city-body").val(selectedItemValue).trigger("city");
+
+                let selectedItemValue2 = $(".search-result__city-head").getSelectedItemData().city;
+                $(".search-result__city-head").val(selectedItemValue2).trigger("city");
+            },
+
+        }
+    };
+
+    $(".search-result__city").easyAutocomplete(options3); //page Catalog head
 });
 
 $(document).ready(function () {
@@ -372,3 +403,5 @@ $(document).ready(function () {
         $("input#input-phone").focus();
     });
 });
+
+

@@ -515,7 +515,8 @@ strong {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-left: 15px; }
   .count-btn {
     background: #EEF3F9;
     border-radius: 3px;
@@ -1957,7 +1958,8 @@ input.popup__input {
   display: flex;
   border: 2px solid #D3DFEA;
   border-radius: 4px;
-  margin-left: 66px; }
+  margin-left: 66px;
+  position: relative; }
   .search-result__icon {
     width: 16px;
     height: 100%;
@@ -1966,29 +1968,36 @@ input.popup__input {
     fill: #124570; }
   .search-result__btn {
     background: #D3DFEA;
-    border-radius: 0 4px 4px 0;
     width: 45px;
     height: 45px; }
   .search-result__item {
-    height: 45px;
-    border: none;
     border-radius: 0;
     border-right: 2px solid  #D3DFEA;
-    line-height: 45px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0 15px;
-    font-family: "Gilroy-Bold", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    color: #124570;
-    background: #EEF3F9;
-    width: 120px; }
+    width: 120px;
+    position: relative; }
     .search-result__item:nth-child(3) {
       border-right: none; }
+    .search-result__item .easy-autocomplete-container, .search-result__item .dropdown {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      top: calc(100% + 2px); }
+
+input.search-result__input {
+  white-space: nowrap;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #124570;
+  background: #EEF3F9;
+  text-overflow: ellipsis;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 45px;
+  padding: 0 15px;
+  height: 45px;
+  border: none;
+  width: 100%; }
 
 .sorting {
   position: relative; }
@@ -2809,7 +2818,7 @@ input.popup__input {
             transform: none; } }
 
 @media only screen and (max-width: 1179px) {
-  .search-result__item {
+  input.search-result__input {
     background-color: transparent; }
   .search {
     -ms-flex-wrap: wrap;
@@ -2842,8 +2851,9 @@ input.popup__input {
   .search-result__item {
     width: 33.33%;
     min-width: auto;
-    padding: 0 10px;
     border-right: 2px solid #EEF3F9; }
+  input.search-result__input {
+    padding: 0 10px; }
   .card-item .card-top {
     width: 26vw; }
   #map {

@@ -6,6 +6,9 @@
     <title>title</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=400, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/daterangepicker.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,267 +16,300 @@
 
 <body>
 <div id="wrapper">
-    <header class="payment__head">
-        <div class="container">
-            <div class="payment__head-row">
-                <a href="#" class="logo">Xx
-                    <span class="logo-span">.</span>
-                </a>
-                <div class="step-mob">шаг 3 из 3</div>
-                <button class="payment__close close"></button>
-                <ul class="step">
-                    <li class="step-item">
-                        <a href="#" class="step-link active">
-                            1. Просмотрите правила дома
-                            <svg class="step-arrow">
-                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="step-item">
-                        <a href="#" class="step-link active">
-                            2. Кто приезжает?
-                            <svg class="step-arrow">
-                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="step-item">
-                        <a href="#" class="step-link">
-                            3. Подтвердите и оплатите
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <div id="wrapper-content">
-        <div class="container">
-            <div class="payment">
-                <form class="payment__content">
-                    <h2 class="title">Подтвердите и оплатите</h2>
-                    <div class="payment__block">
-                        <div class="like-box">
-                            <img src="img/medical.svg" alt="medical" class="like-box__icon">
-                            <div class="like-box__col">
-                                <p class="like-box__title">Людям нравится это объявление</p>
-                                <p class="like-box__text">На прошлой неделе этими датами интересовались другие люди (5)</p>
-                            </div>
-                        </div>
-
-                        <div class="form-confirm">
-                            <div class="field field-payment">
-                                <p class="name">Оплатить с помощью</p>
-                                <input type="text" value="Кредитная или дебетовая карта" class="input-select" readonly required>
-                                <div class="icon">
-                                    <svg class="arrow arrow-down">
-                                        <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                    </svg>
-                                </div>
-                                <ul class="select">
-                                    <li class="select-option active">Кредитная или дебетовая карта</li>
-                                    <li class="select-option">Оплата наличными</li>
-                                </ul>
-                            </div>
-                            <div class="payment-row">
-                                <div class="field mt-22 w-100" >
-                                    <p class="name">Имя</p>
-                                    <input type="text" name="username" required>
-                                </div>
-                                <div class="field mt-22 w-100">
-                                    <p class="name">Фамилия</p>
-                                    <input type="text" name="username" required>
-                                </div>
-                            </div>
-
-                            <div class="payment-card">
-                                <div class="field mt-22">
-                                    <p class="name">Номер карты</p>
-                                    <input type="text" value=""  class="input-card" required>
-                                </div>
-                                <div class="payment-row">
-                                    <div class="field">
-                                        <p class="name">Срок действия</p>
-                                        <input type="text" value="" placeholder="XX / XX" class="input-validity" required>
-                                    </div>
-                                    <div class="field">
-                                        <p class="name">CVV</p>
-                                        <input type="text" value="" placeholder="XXX" class="input-cvv" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="payment-row">
-                                <div class="field mt-22">
-                                    <p class="name">Адрес</p>
-                                    <input type="text"  required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Квартира</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Город</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Штат</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Индекс</p>
-                                    <input type="text" required>
-                                </div>
-                                <div class="field mt-22">
-                                    <p class="name">Страна/регион</p>
-                                    <input type="text" id="js-easyAutocomplete" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="payment__radio">
-                            <label class="label-checkbox label-radio">
-                                <input type="radio" name="radio" class="checkbox" checked>
-                                <span class="check check-radio"></span>
-                                <span class="check-text check-radio-text">Оплатить полностью — $420 </span>
-                            </label>
-                            <label class="label-checkbox label-radio">
-                                <input type="radio" name="radio" class="checkbox">
-                                <span class="check check-radio"></span>
-                                <span class="check-text check-radio-text">Частичная предоплата — $210
-                                <span class="payment__form-text">Внесите $210 сейчас, а остаток ($210) автоматически спишется с того же способа оплаты 1 сент. 2020 г.. Без дополнительных сборов.
-                                    <a href="#" class="more-link"> Подробнее
-                                        <svg class="more-link-arrow">
-                                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                        </svg>
-                                    </a>
-                                </span>
-                            </span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="regulations">
-                        <p class="text-17">ПРАВИЛА ОТМЕНЫ</p>
-                        <p class="regulations-text">
-                            Отмените до 3:00 PM 27 авг. и получите полный возврат. Затем, если вы отмените до 3:00 PM 9 сент., вы получите полный возврат за минусом сбора за услуги. <a href="#" class="more-link"> Подробнее
-                            <svg class="more-link-arrow">
-                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                            </svg>
-                        </a>
-                        </p>
-                    </div>
-                    <button type="submit" class="btn btn-red">ЗАПРОСИТЬ БРОНИРОВАНИЕ
-                        <svg class="arrow">
-                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                        </svg>
-                    </button>
-
-                    <div class="like-box">
-                        <img src="img/medical.svg" alt="medical" class="like-box__icon">
-                        <div class="like-box__col">
-                            <p class="like-box__title">Людям нравится это объявление</p>
-                            <p class="like-box__text">На прошлой неделе этими датами интересовались другие люди (5)</p>
-                        </div>
-                    </div>
-                </form>
-                <div class="payment__right">
-                    <div class="payment__form">
-                        <div class="payment__form-head">
-                            <img src="img/foto.jpg" alt="img" class="payment__form-img">
-                            <div class="payment__form-col">
-                                <p class="text-16">Просторная и современная квартира в центре города</p>
-                                <div class="star">
-                                    <img src="img/star-2.svg" alt="star" class="img-star">
-                                    <span class="text-15 c-gray-medium weight-normal">5,0 (98 отзывов)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="payment__form-content">
-                            <ul class="payment__form-ul">
-                                <li class="payment__form-li">
-                                    <img src="img/calendar.svg" alt="calendar" class="icon-calendar">
-                                    <div class="payment__form-info">
-                                        <p class="payment__form-gray">Прибытие и выезд</p>
-                                        <p class="payment__form-blue">10 сентября - 20 сентября</p>
-                                    </div>
-                                </li>
-                                <li class="payment__form-li">
-                                    <img src="img/person.svg" alt="person" class="icon-person">
-                                    <div class="payment__form-info">
-                                        <p class="payment__form-gray">Гостей</p>
-                                        <p class="payment__form-blue">3 человека</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="payment__form-ul">
-                                <li class="payment__form-li">
-                                    <div class="counts">
-                                        <p class="counts-item">878₽ x 10 ночей</p>
-                                        <p class="counts-item">$450</p>
-                                    </div>
-                                </li>
-                                <li class="payment__form-li">
-                                    <div class="counts">
-                                        <p class="counts-item">Скидка 10% (за неделю)
-                                            <span class="question">
-                                                <span class="tooltip">При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат и любовь.</span>
-                                            </span>
-                                        </p>
-                                        <p class="counts-item">-$45</p>
-                                    </div>
-                                </li>
-                                <li class="payment__form-li">
-                                    <div class="counts">
-                                        <p class="counts-item">Плата за уборку
-                                            <span class="question">
-                                                <span class="tooltip">При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат и любовь.</span>
-                                            </span>
-                                        </p>
-                                        <p class="counts-item">$15</p>
-                                    </div>
-                                </li>
-                                <li class="payment__form-li">
-                                    <div class="counts">
-                                        <p class="counts-total">Итого</p>
-                                        <p class="counts-total"> $420</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-red">ЗАБРОНИРОВАТЬ</a>
-                            <div class="payment__form-bottom">
-                                <p class="text-16">Бесплатная отмена до 27 августа</p>
-                                <p class="payment__form-text">
-                                    При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат. <a href="#" class="more-link"> Подробнее</a>
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <footer class="footer footer-small">
+    <!-- header.html -->
+<header class="header header-second">
     <div class="container">
-        <div class="footer-bottom__row">
+        <div class="header__between">
             <a href="#" class="logo">Xx
                 <span class="logo-span">.</span>
             </a>
-            <div class="footer__row">
-                <a href="#" class="footer__select">$ USD
-                    <svg class="footer__select-arrow">
-                        <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                    </svg>
+             <div class="header-row">
+                <form class="search-result">
+                    <div class="search-result__item">
+                        <input class="search-result__input search-result__city search-result__city-head" value="Баку">
+                    </div>
+                    <div class="search-result__item">
+                        <input class="search-result__input search-result__date" value="10.10 - 20.10">
+                    </div>
+                    <div class="search-result__item">
+                        <input type="text" value="1 человек" class="search-result__input input-visitor" readonly required>
+                        <ul class="dropdown">
+                            <li class="dropdown-item">
+                                <p class="c-gray">Взрослые
+                                    <span class="text-12">от 13 лет</span>
+                                </p>
+                                <div class="count ">
+                                    <button type="button" class="count-btn count-minus "></button>
+                                    <input type="text" class="input-count count__adults" value="1" readonly>
+                                    <button type="button" class="count-btn count-plus"></button>
+                                </div>
+                            </li>
+                            <li class="dropdown-item">
+                                <p class="c-gray">Дети
+                                    <span class="text-12">до 12 лет</span>
+                                </p>
+                                <div class="count">
+                                    <button type="button" class="count-btn count-minus "></button>
+                                    <input type="text" class="input-count count__children" value="0" readonly>
+                                    <button type="button" class="count-btn count-plus"></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button type="submit" class="search-result__btn">
+                        <svg class="search-result__icon">
+                            <use xlink:href="img/sprite/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+                <nav class="header-nav">
+                    <ul class="menu">
+                        <li class="menu-item d-md-block">
+                            <a href="#" class="link c-dark">
+                                <span class="add"></span>
+                                добавить квартиру
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="link link-sign-in c-dark">
+                                ВХОД
+                            </a>
+                        </li>
+                        <li class="menu-item header__selects-item">
+                            <a href="#" class="link c-dark">RU
+                                <svg class="header__selects-arrow">
+                                    <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+             </div>
+            <button type="button" class="burger d-block">
+                    <span class="burger-line burger-top"></span>
+                    <span class="burger-line burger-bottom"></span>
+                </button>
+        </div>
+    </div>
+</header>
+
+
+
+    <div id="wrapper-content">
+        <div class="catalog">
+            <div class="catalog-content">
+                <form class="search-result">
+                    <div class="search-result__item">
+                        <input class="search-result__input search-result__city search-result__city-body" value="Баку">
+                    </div>
+                   <div class="search-result__item">
+                       <input class="search-result__input search-result__date" value="10.10 - 20.10">
+                   </div>
+                   <div class="search-result__item">
+                       <input type="text" value="1 человек" class="search-result__input input-visitor" readonly required>
+                       <ul class="dropdown">
+                           <li class="dropdown-item">
+                               <p class="c-gray">Взрослые
+                                   <span class="text-12">от 13 лет</span>
+                               </p>
+                               <div class="count ">
+                                   <button type="button" class="count-btn count-minus "></button>
+                                   <input type="text" class="input-count count__adults" value="1" readonly>
+                                   <button type="button" class="count-btn count-plus"></button>
+                               </div>
+                           </li>
+                           <li class="dropdown-item">
+                               <p class="c-gray">Дети
+                                   <span class="text-12">до 12 лет</span>
+                               </p>
+                               <div class="count">
+                                   <button type="button" class="count-btn count-minus "></button>
+                                   <input type="text" class="input-count count__children" value="0" readonly>
+                                   <button type="button" class="count-btn count-plus"></button>
+                               </div>
+                           </li>
+                       </ul>
+                   </div>
+
+
+                    <button type="submit" class="search-result__btn">
+                        <svg class="search-result__icon">
+                            <use xlink:href="img/sprite/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+                <div class="catalog__head">
+                    <div class="catalog__head-row">
+                        <h2 class="title">Жилье в Баку</h2>
+                        <div class="sorting">
+                            <button class="btn-light"><span>ОТ ДЕШЕВЫХ</span>
+                                <svg class="arrow arrow-down">
+                                    <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </button>
+                            <div class="sorting-drop">
+                                <ul class="sorting-menu">
+                                    <li class="sorting-option active">ОТ ДЕШЕВЫХ</li>
+                                    <li class="sorting-option">ОТ дорогих</li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="btns-filter">
+                        <a href="#" class="btn-white btn-filter">Цена</a>
+                        <a href="#" class="btn-white btn-filter">Количество комнат</a>
+                        <a href="#" class="btn-white btn-filter hide">Метро</a>
+                        <a href="#" class="btn-white btn-filter btn-filter-all ">
+                            Все Фильтры
+                            <svg class="arrow arrow-down">
+                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </a>
+                        <label class="hide">
+                            <input type="checkbox" class="checkbox">
+                            <span class="btn-white check-reservation">Мгновенная бронь</span>
+                        </label>
+                      
+                    </div>
+                </div>
+
+                <ul class="catalog-list" id="catalog-list"><!-- see in file map.js --> </ul>
+
+                <nav aria-label="navigation">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-prev page-arrow" href="#"></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link active" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                        <li class="page-item"><a class="page-next page-arrow" href="#"></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="map"></div>
+        </div>
+
+    </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="col">
+                <div class="footer-top__row">
+                    <a href="#" class="logo">Xx
+                        <span class="logo-span">.</span>
+                    </a>
+                    <p class="footer-text">
+                        Lorem ipsum dolor sit amet, <br> consectetur adipiscing
+                    </p>
+                </div>
+
+                <div class="markets">
+                    <a href="#">
+                        <img src="img/app-store.png" alt="app store" class="markets-img">
+                    </a>
+                    <a href="#">
+                        <img src="img/google-play.png" alt="google play" class="markets-img">
+                    </a>
+                </div>
+            </div>
+            <ul class="col">
+                <li class="footer-main">COMPANY</li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">About</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Partnership</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Careers</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Contacts</a>
+                </li>
+            </ul>
+            <ul class="col">
+                <li class="footer-main">host</li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Host your home</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Hosting rules</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Payment methods</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Hosting is safe</a>
+                </li>
+            </ul>
+            <ul class="col">
+                <li class="footer-main">SUPPORT</li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Knowledge base</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Report abuse</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-review">Trustpilot review score</a>
+                </li>
+            </ul>
+            <div class="markets-mob">
+                <a href="#">
+                    <img src="img/app-store.png" alt="app store" class="markets-img">
                 </a>
-                <a href="#" class="footer__select">ru
-                    <svg class="footer__select-arrow">
-                        <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                    </svg>
+                <a href="#">
+                    <img src="img/google-play.png" alt="google play" class="markets-img">
                 </a>
             </div>
+
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__row">
+                <div class="footer-bottom__first">
+                    <p class="footer-text">
+                        © 2020 Rentxx, Inc. All rights reserved
+                    </p>
+                    <ul class="footer-bottom__ul">
+                        <li class="footer-bottom__li">
+                            <a href="#" class="footer-link">Privacy</a>
+                        </li>
+                        <li class="footer-bottom__li">
+                            <a href="#" class="footer-link"> Terms </a>
+                        </li>
+                        <li class="footer-bottom__li">
+                            <a href="#" class="footer-link">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__cards">
+                    <a href="#" class="footer__card"><img src="img/visa.png" alt="visa" class="footer-card__logo"></a>
+                    <a href="#" class="footer__card"><img src="img/mastercard.png" alt="mastercard" class="footer-card__logo"></a>
+                    <a href="#" class="footer__card"><img src="img/paypal.png" alt="paypal" class="footer-card__logo"></a>
+                </div>
+                <div class="footer__row">
+                    <a href="#" class="footer__select">$ USD
+                        <svg class="footer__select-arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__select">ru
+                        <svg class="footer__select-arrow">
+                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+           
         </div>
     </div>
 </footer>
@@ -502,13 +538,18 @@
 
 </div>
 
-
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
 <script src="js/moment.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
-<script src="js/jquery.inputmask.bundle.js"></script>
+
+<script src="js/map.js"></script>
+
 <script src="js/jquery.daterangepicker.min.js"></script>
 <script src="js/common.js"></script>
+
 
 </body>
 </html>
