@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="form-confirm">
-                            <div class="field">
+                            <div class="field field-payment">
                                 <p class="name">Оплатить с помощью</p>
                                 <input type="text" value="Кредитная или дебетовая карта" class="input-select" readonly required>
                                 <div class="icon">
@@ -94,11 +94,11 @@
                                 <div class="payment-row">
                                     <div class="field">
                                         <p class="name">Срок действия</p>
-                                        <input type="text" value="10 / 25" class="input-validity" required>
+                                        <input type="text" value="" placeholder="XX / XX" class="input-validity" required>
                                     </div>
                                     <div class="field">
                                         <p class="name">CVV</p>
-                                        <input type="text" value="769" class="input-cvv" required>
+                                        <input type="text" value="" placeholder="XXX" class="input-cvv" required>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                                 </div>
                                 <div class="field mt-22">
                                     <p class="name">Страна/регион</p>
-                                    <input type="text" required>
+                                    <input type="text" id="js-easyAutocomplete" required>
                                 </div>
                             </div>
                         </div>
@@ -255,13 +255,17 @@
         </div>
 
     </div>
+
     @import "footer-small.html"
+    @import "popups.html"
 </div>
 
 
+<script src="js/moment.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/jquery.inputmask.bundle.js"></script>
+<script src="js/jquery.daterangepicker.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>

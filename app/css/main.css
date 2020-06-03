@@ -209,6 +209,15 @@ input.input-count {
   input.input-count:hover {
     background-color: transparent; }
 
+.field-payment {
+  border: 2px solid #124570;
+  border-radius: 4px; }
+  .field-payment input {
+    border: none;
+    height: 66px; }
+  .field-payment .select {
+    top: calc(100% + 4px); }
+
 button {
   cursor: pointer;
   outline: none;
@@ -474,6 +483,8 @@ strong {
     background-color: #EEF3F9; }
   .field:hover input.input-count {
     background-color: transparent; }
+  .field:hover input.input-validity, .field:hover input.input-cvv, .field:hover input.input-card {
+    border-color: transparent; }
 
 .dropdown {
   position: absolute;
@@ -1067,9 +1078,8 @@ strong {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .markets-img {
-    height: auto;
-    max-width: 122px;
-    width: 100%; }
+    height: 38px;
+    width: auto; }
   .markets a {
     margin-right: 15px; }
     .markets a:last-child {
@@ -2532,13 +2542,13 @@ input.popup__input {
   width: 50%;
   margin: 0; }
   .payment-card .payment-row .field input {
-    border-top: none; }
+    margin-top: -1px; }
   .payment-card .payment-row .field:first-child input {
-    border-right: 1px solid #EEF3F9;
-    border-radius: 0 0 0 4px; }
+    border-radius: 0 0 0 4px;
+    margin-right: -1px; }
   .payment-card .payment-row .field:last-child input {
-    border-left: 1px solid #EEF3F9;
-    border-radius: 0 0 4px 0; }
+    border-radius: 0 0 4px 0;
+    margin-left: -1px; }
 
 .regulations {
   padding: 40px 0 10px;
@@ -2549,6 +2559,9 @@ input.popup__input {
     letter-spacing: 0.02em;
     color: #50575E;
     margin-top: 9px; }
+
+.payment__content input:valid {
+  border: 2px solid #124570; }
 
 .signin-signup {
   min-height: calc(100vh - 382px - 77px);
@@ -2564,6 +2577,8 @@ input.popup__input {
           box-shadow: 0 0 65px rgba(95, 123, 148, 0.4);
   border-radius: 5px;
   overflow: hidden; }
+  .forms input:valid {
+    border: 2px solid #124570; }
   .forms-content {
     padding: 0 40px 40px; }
     .forms-content form {
@@ -3097,8 +3112,9 @@ input.popup__input {
     display: block;
     width: 54%; }
   .markets-img {
-    width: 100%;
+    height: auto;
     max-width: 194px;
+    width: 100%;
     margin-bottom: 20px; }
   .col {
     margin-bottom: 45px; }

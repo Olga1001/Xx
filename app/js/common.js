@@ -274,7 +274,7 @@ $(document).ready(function () {
         }
     });
     $("input.input-card").inputmask("9999 - 9999 - 9999 - 9999");
-    $("input.input-validity").inputmask("99 / 99");
+    $("input.input-validity").inputmask( "99 / 99");
     $("input.input-cvv").inputmask("999");
 
 });
