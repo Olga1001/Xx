@@ -2975,7 +2975,10 @@ input.search-result__input {
   .payment__form-text {
     margin-top: 5px; }
   .payment__form-blue {
-    text-decoration: underline; } }
+    text-decoration: underline; }
+  .search-result__item .dropdown {
+    left: auto;
+    right: 0; } }
 
 @media only screen and (max-width: 767px) {
   .header__selects {
