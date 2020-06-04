@@ -330,7 +330,7 @@ let optionDate2 = {
     startOfWeek: 'monday',
     singleMonth: true,
     showShortcuts: false,
-    // showTopbar: false,
+    showTopbar: false,
     autoApply: false,
     format: "DD.MM"
 }
@@ -370,6 +370,9 @@ $(document).ready(function () {
                 let selectedItemValue = $("#input-country").getSelectedItemData().mask;
                 $("#input-phone").val(selectedItemValue).trigger("mask");
             },
+            match: {
+                enabled: true
+            }
 
         }
     };
@@ -390,11 +393,14 @@ $(document).ready(function () {
                 let selectedItemValue2 = $(".search-result__city-head").getSelectedItemData().city;
                 $(".search-result__city-head").val(selectedItemValue2).trigger("city");
             },
-
+            match: {
+                enabled: true
+            }
         }
     };
 
-    $(".search-result__city").easyAutocomplete(options3); //page Catalog head
+    $(".search-result__city").easyAutocomplete(options3); //page Catalog
+
 });
 
 $(document).ready(function () {
