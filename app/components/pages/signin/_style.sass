@@ -3,6 +3,7 @@
   padding: 40px 0 90px
   background: #EEF3F9
 
+
 .forms
   max-width: 390px
   width: 100%
@@ -11,7 +12,8 @@
   box-shadow: 0 0 65px rgba(95, 123, 148, 0.4)
   border-radius: 5px
   overflow: hidden
-  input:valid
+
+  input:focus
     border: 2px solid #124570
   &-content
     padding: 0 40px 40px
@@ -19,6 +21,12 @@
       display: none
       &.active
         display: block
+  .field-country
+    .icon
+      height: calc(100% - 4px)
+      top: 50%
+      transform: translateY(-50%)
+      right: 2px
   &-gray
     font-size: 14px
     line-height: 53px
