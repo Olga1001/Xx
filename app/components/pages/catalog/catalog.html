@@ -128,10 +128,26 @@
 <script src="js/moment.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
-
 <script src="js/map.js"></script>
 
 <script src="js/jquery.daterangepicker.min.js"></script>
+<script>
+
+    let optionDate2 = {
+        opens: 'left',
+        autoUpdateInput: true,
+        startOfWeek: 'monday',
+        singleMonth: true,
+        showShortcuts: false,
+        showTopbar: false,
+        autoApply: false,
+        format: "DD.MM"
+    }
+
+    $(function() {
+        $('.search-result__date').dateRangePicker(optionDate2)
+    });
+</script>
 <script src="js/common.js"></script>
 
 

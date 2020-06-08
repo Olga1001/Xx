@@ -1194,6 +1194,21 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/jquery.daterangepicker.min.js"></script>
+	<script>
+		let optionDate = {
+			opens: 'left',
+			autoUpdateInput: true,
+			startOfWeek: 'monday',
+			singleMonth: true,
+			showShortcuts: false,
+			// showTopbar: false,
+			autoApply: false,
+			format: "YYYY.MM.DD"
+		}
+		$(function() {
+			$('input[name="daterange"]').dateRangePicker(optionDate);
+		});
+	</script>
     <script src="js/common.js"></script>
 
 </body>
