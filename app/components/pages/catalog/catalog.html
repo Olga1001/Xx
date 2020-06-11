@@ -25,7 +25,7 @@
                         <input class="search-result__input search-result__city search-result__city-body" value="Баку" required>
                     </div>
                    <div class="search-result__item">
-                       <input class="search-result__input search-result__date" value="10.10 - 20.10" required>
+                       <input class="search-result__input search-result__date_mob" value="10.10 - 20.10" readonly required>
                    </div>
                    <div class="search-result__item">
                        <input type="text" value="1 человек" class="search-result__input input-visitor" readonly required>
@@ -132,20 +132,20 @@
 
 <script src="js/jquery.daterangepicker.min.js"></script>
 <script>
-
     let optionDate2 = {
         opens: 'left',
         autoUpdateInput: true,
         startOfWeek: 'monday',
         singleMonth: true,
         showShortcuts: false,
-        showTopbar: false,
+        // showTopbar: false,
         autoApply: false,
         format: "DD.MM"
     }
 
     $(function() {
-        $('.search-result__date').dateRangePicker(optionDate2)
+        $('.search-result__date').dateRangePicker(optionDate2);
+        $('.search-result__date_mob').dateRangePicker(optionDate2);
     });
 </script>
 <script src="js/common.js"></script>
